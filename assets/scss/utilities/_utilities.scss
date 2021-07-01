@@ -1,0 +1,72 @@
+
+// page wrapper
+.template--wrapper {
+	overflow: hidden;
+    min-height: 100vh;
+    @include prefix((
+        display: flex,
+        flex-direction: column,
+    ));
+    @include respond-below(md) {
+        &.p50 {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+}
+
+.ss-container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1000px;
+    &--fluid {
+        @extend .ss-container;
+        max-width: 1500px;
+    }
+}
+
+.o-hidden {
+    overflow: hidden;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.custom__col--10 {
+    padding: 0 15px;
+    width: calc(100% - 290px);
+}
+
+.custom__col--2 {
+    padding: 0 15px;
+    width: 290px;
+}
+
+.bbrr {
+    border-bottom-right-radius: 20px;
+}
+.bblr {
+    border-bottom-left-radius: 20px;
+}
+
+svg {
+    @extend %bodyFont;
+}
+
+.c-pointer {
+    cursor: pointer;
+}
+
+@include respond-below(md) {
+    .p50 {
+        padding: 25px;
+    }
+    .p30 {
+        padding: 20px;
+    }
+}

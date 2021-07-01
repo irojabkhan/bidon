@@ -1,0 +1,83 @@
+:root{
+	--base-gutter: 30px;
+	--md-gutter: 50px;
+	--lg-gutter: 70px;
+	--xl-gutter: 100px;
+	--base-spacer-x: 16px;
+	--base-spacer-y: 16px;
+	--b-radius-6: 25px;
+	@include respond-below(xxl){
+		--base-gutter: 20px;
+		--md-gutter: 30px;
+		--lg-gutter: 50px;
+		--xl-gutter: 70px;
+	}
+	@include respond-below(xl){
+		--base-gutter: 20px;
+		--md-gutter: 30px;
+		--lg-gutter: 40px;
+		--xl-gutter: 50px;
+	}
+    @include respond-below(lg){
+		--base-spacer-x: 10px;
+		--base-spacer-y: 10px;
+		--md-gutter: 20px;
+		--lg-gutter: 30px;
+		--xl-gutter: 40px;
+    }
+    @include respond-below(md){
+		--base-spacer-x: 5px;
+		--base-spacer-y: 5px;
+		--md-gutter: 20px;
+		--lg-gutter: 30px;
+		--xl-gutter: 40px;
+    }
+}
+
+// Fonts
+$headerFont: 'Inter', sans-serif;
+$bodyFont: 'Inter', sans-serif;
+
+// color
+$primary: #00CC76 !default;
+$danger: #FE504F !default;
+$warning: #FFA53C !default;
+$dark: #29294f !default;
+$green: #60CE83 !default;
+$blue: #597DFC !default;
+$blueTwo: #0F8AF9 !default;
+$deepBlue: #597DFC !default;
+$white: #ffffff !default;
+$ghostWhite: #F6F7FB !default;
+$grey: #c4cad6 !default;
+$baliHai: #8A95AD !default;
+$black: #000000 !default;
+$darkBlue: #152C5B !default;
+$linkBlue: #1A0DAB !default;
+$twitter: #1da1f2 !default;
+$linkedin: #0077b5 !default;
+$instagram: #e1306c !default;
+
+// $template-color: #F6F7FB;dd
+
+// theme-color
+$theme-colors: () !default;
+$theme-colors: map-merge(
+	(
+		'primary': $primary,
+		'danger': $danger,
+		'warning': $warning,
+		'green': $green,
+		'blue': $blue,
+		'dark': $dark,
+		'white': $white,
+		'ghostWhite': $ghostWhite,
+		'baliHai': $baliHai,
+		'grey': $grey,
+		'black': $black,
+		'twitter': $twitter,
+		'linkedin': $linkedin,
+		'instagram': $instagram,
+	),
+	$theme-colors
+);
