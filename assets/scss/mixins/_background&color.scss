@@ -28,4 +28,12 @@
 	}
 }
 
- 
+%gradient {
+    background: -webkit-linear-gradient(0deg, rgba(65,88,208,1) 0%, rgba(200,80,192,1) 50%, rgba(255,204,112,1) 100%);
+}
+
+%gradientText {
+    background: -webkit-linear-gradient(0deg, rgba(65,88,208,1) 0%, rgba(200,80,192,1) 50%, rgba(255,204,112,1) 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}

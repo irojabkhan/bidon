@@ -1,0 +1,107 @@
+
+.top__chart__wrap {
+    .nav {
+        border-bottom: 0;
+        margin-bottom: 20px;
+        .nav-item {
+            margin-right: 30px;
+            .nav-link {
+                margin-bottom: 0;
+                border: 0;
+                background: transparent;
+                padding: 0;
+                @include fontStyle(var(--h4-fontsize), 700, rgba($black, .5));
+                @extend %headerFont;
+                text-transform: uppercase;
+                &.active {
+                    color: $black;
+                }
+            }
+        }
+    }
+}
+
+.top__chart {
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.top__chart__item {
+    display: flex;
+    align-items: center;
+    background: $white;
+    border-radius: 15px;
+    border: 1px solid rgba($black, .06);
+    padding: 15px;
+    position: relative;
+    margin-bottom: 10px;
+    width: 260px;
+    &:before,
+    &:after {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 100%;
+        background: $white;
+        border-radius: 15px;
+        border: 1px solid rgba($black, .06);
+        content: '';
+        top: 0;
+        transition: all .3s ease;
+    }
+    &:before {
+        width: 95%;
+        z-index: -1;
+    }
+    &:after {
+        width: 90%;
+        z-index: -2;
+    }
+    &:hover {
+        &:before {
+            top: 5px;
+        }
+        &:after {
+            top: 10px;
+        }
+    }
+    .rank__no {
+        @include fontStyle(1.2rem, 500, $grey);
+        @extend %bodyFont;
+        margin-right: 15px;
+    }
+    .thumb {
+        width: 54px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 15px;
+        img {
+            width: 100%;
+        }
+    }
+    .top__chart__body {
+        h4 {
+            @include fontStyle(1.4rem, 600, $dark);
+            @extend %headerFont;
+            .verified {
+                @extend %gradientText;
+                margin-left: 8px;
+            }
+        }
+        p {
+            @include fontStyle(1.2rem, 400, $tundra);
+            @extend %bodyFont;
+        }
+    }
+}
+
+.js-marquee-wrapper {
+    .js-marquee {
+        display: flex;
+        .top__chart__item {
+            margin-right: 30px;
+            min-width: 260px;
+        }
+    }
+}

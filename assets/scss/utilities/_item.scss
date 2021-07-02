@@ -1,0 +1,298 @@
+
+.trading__card {
+    position: relative;
+    margin-bottom: 10px;
+    z-index: 0;
+    &:before,
+    &:after {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 100%;
+        background: $white;
+        border-radius: 15px;
+        border: 1px solid rgba($black, .06);
+        content: '';
+        top: 0;
+        transition: all .3s ease;
+    }
+    &:before {
+        width: 95%;
+        z-index: -1;
+    }
+    &:after {
+        width: 90%;
+        z-index: -2;
+    }
+    &:hover {
+        &:before {
+            top: 5px;
+        }
+        &:after {
+            top: 10px;
+        }
+        .trading__card__thumb {
+            &:before {
+                opacity: 1;
+            }
+            .more__option {
+                opacity: 1;
+                bottom: 15px;
+            }
+        }
+    }
+    & &__thumb {
+        overflow: hidden;
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+        position: relative;
+        img {
+            width: 100%;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50%;
+            background: linear-gradient(to top, $black, rgba($black, .0));
+            opacity: 0;
+            transition: all .3s ease;
+        }
+        .more__option {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 25px;
+            transition: all .3s ease;
+            opacity: 0;
+            .place__bid {
+                @include fontStyle(1.2rem, 500, $white);
+                @extend %bodyFont;
+                text-transform: uppercase;
+            }
+            .more {
+                .option__toggler {
+                    color: $white;
+                    font-size: 1.6rem;
+                }
+            }
+        }
+        .tranding__time__left {
+            position: absolute;
+            top: 25px;
+            left: 20px;
+            background: $white;
+            border-radius: 8px;
+            padding: 5px 15px;
+            span {
+                @include fontStyle(1.4rem, 600);
+                @extend %gradientText;
+            }
+        }
+    }
+    & &__body {
+        border: 1px solid rgba($black, .06);
+        border-bottom-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+        padding: 25px;
+        background: $white;
+        .item__author {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            .author__thumb {
+                height: 30px;
+                min-width: 30px;
+                flex: 0 0 30px;
+                border-radius: 50%;
+                overflow: hidden;
+                margin-right: 15px;
+            }
+            .author__name {
+                @include fontStyle(1.4rem, 500, $dark);
+                @extend %bodyFont;
+                .varified {
+                    margin-left: 10px;
+                }
+                i {
+                    @extend %gradientText;
+                }
+            }
+        }
+        h3 {
+            @include fontStyle(var(--h4-fontsize), 700, $dark);
+            @extend %headerFont;
+            margin-bottom: 15px;
+        }
+        .item__price {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            p {
+                @include fontStyle(1.4rem, 500);
+                @extend %gradientText;
+                @extend %bodyFont;
+                margin-right: 20px;
+                position: relative;
+                transition: all .3s ease;
+                &:hover {
+                    ._tooltip {
+                        opacity: 1;
+                    }
+                }
+                ._tooltip {
+                    position: absolute;
+                    top: 100%;
+                    right: 0;
+                    border: 1px solid rgba($black, .08);
+                    border-radius: 5px;
+                    @include fontStyle(1.2rem, 400, $tundra);
+                    @extend %bodyFont;
+                    box-shadow: 0px 5px 15px 0px rgba($black, 0.1);
+                    background: $white;
+                    -webkit-background-clip: unset;
+                    -webkit-text-fill-color: $tundra;
+                    padding: 2px 5px;
+                    opacity: 0;
+                    transition: all .3s ease;
+                    &:after, 
+                    &:before {
+                        bottom: 100%;
+                        right: 10px;
+                        border: solid transparent;
+                        content: "";
+                        height: 0;
+                        width: 0;
+                        position: absolute;
+                        pointer-events: none;
+                    }
+                    &:after {
+                        border-color: rgba($white, 0);
+                        border-bottom-color: $white;
+                        border-width: 5px;
+                        margin-left: -5px;
+                    }
+                    &:before {
+                        border-color: rgba($black, 0);
+                        border-bottom-color: rgba($black, .08);
+                        border-width: 6px;
+                        margin-left: -6px;
+                    }
+                }
+            }
+            .price__rating {
+                @include fontStyle(1.4rem, 500, $grey);
+                @extend %bodyFont;
+                position: relative;
+                padding-left: 18px;
+                &:before {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    content: '\f061';
+                    font-family: 'Font Awesome 5 Free';
+                    font-weight: 900;
+                    transform: rotate(-45deg);
+                    color: $grey;
+                }
+                
+                &:hover {
+                    ._tooltip {
+                        opacity: 1;
+                    }
+                }
+                ._tooltip {
+                    position: absolute;
+                    top: 100%;
+                    min-width: 80px;
+                    text-align: center;
+                    right: 0;
+                    border: 1px solid rgba($black, .08);
+                    border-radius: 5px;
+                    @include fontStyle(1.2rem, 400, $tundra);
+                    @extend %bodyFont;
+                    box-shadow: 0px 5px 15px 0px rgba($black, 0.1);
+                    background: $white;
+                    -webkit-background-clip: unset;
+                    -webkit-text-fill-color: $tundra;
+                    padding: 2px 5px;
+                    opacity: 0;
+                    transition: all .3s ease;
+                    &:after, 
+                    &:before {
+                        bottom: 100%;
+                        right: 10px;
+                        border: solid transparent;
+                        content: "";
+                        height: 0;
+                        width: 0;
+                        position: absolute;
+                        pointer-events: none;
+                    }
+                    &:after {
+                        border-color: rgba($white, 0);
+                        border-bottom-color: $white;
+                        border-width: 5px;
+                        margin-left: -5px;
+                    }
+                    &:before {
+                        border-color: rgba($black, 0);
+                        border-bottom-color: rgba($black, .08);
+                        border-width: 6px;
+                        margin-left: -6px;
+                    }
+                }
+            }
+        }
+        .meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .stocks {
+                @include fontStyle(1.4rem, 500, $grey);
+                @extend %bodyFont;
+            }
+            .favourite {
+                @include fontStyle(1.4rem, 500, $grey);
+                @extend %bodyFont;
+                &:hover {
+                    color: $dark;
+                }
+                &.isFav {
+                    color: $dark;
+                    i {
+                        color: $danger;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.trending__card__carousel {
+    position: relative;
+    .owl-nav {
+        position: absolute;
+        top: -60px;
+        right: 0;
+        button.owl-prev,
+        button.owl-next {
+            height: 35px;
+            width: 35px;
+            border-radius: 8px;
+            line-height: 35px;
+            text-align: center;
+            background: rgba($primary, .1);
+            color: $primary;
+        }
+        button.owl-prev {
+            margin-right: 10px;
+        }
+    }
+}

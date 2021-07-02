@@ -1,0 +1,12 @@
+
+.section__header {
+    margin-bottom: 30px;
+    h2 {
+        @include fontStyle(var(--h3-fontsize), 700, $dark);
+        @extend %headerFont;
+        img {
+            margin-left: 10px;
+        }
+    }
+}
+
