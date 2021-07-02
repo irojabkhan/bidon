@@ -4,11 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.min.css">
     <title>Bidon</title>
 </head>
 <body>
 
-    <h1>HelloWorld</h1>
+    <div class="pt50 pb50 background__liteGrey">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link active" id="seller-tab" data-bs-toggle="tab" data-bs-target="#seller" type="button" role="tab" aria-controls="seller" aria-selected="true">Top Seller</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="buyer-tab" data-bs-toggle="tab" data-bs-target="#buyer" type="button" role="tab" aria-controls="buyer" aria-selected="false">Top Buyers</button>
+                        </li>
+                      </ul>
+                      <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="seller" role="tabpanel" aria-labelledby="seller-tab">
+                            <div class="top__chart">
+                                <div class="top__chart__item">
+                                    <span class="rank__no">#1</span>
+                                    <div class="thumb">
+                                        <img src="assets/img/user1.jpg" class="img-fluid" alt="">
+                                    </div>
+                                    <div class="top__chart__body">
+                                        <h4><a href="#">Nia Lane</a><span class="verified"></span></h4>
+                                        <p>2.52 ETH</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="buyer" role="tabpanel" aria-labelledby="buyer-tab">hello 2</div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <script src="assets/css/bootstrap/bootstrap.min.js"></script>

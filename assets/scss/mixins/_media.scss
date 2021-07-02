@@ -1,17 +1,17 @@
-
 // A map of breakpoints.
 $breakpoints: (
-	xxs : 479px,
-	xs  : 575px,
-	sm  : 767px,
-	md  : 991px,
-	lg  : 1199px,
-	xl  : 1399px,
-	xxl : 1600px
+	xs: 480px,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+	xxl: 1400px,
+	hl: 1600px,
 );
 
-//  RESPOND ABOVE 
-//––––––––––––––––––––––––––––––––––––––––––––––––––-
+//
+//  RESPOND ABOVE
+//––––––––––––––––––––––––––––––––––––––––––––––––––
 @mixin respond-above($breakpoint) {
 	// If the breakpoint exists in the map.
 	@if map-has-key($breakpoints, $breakpoint) {
@@ -28,6 +28,7 @@ $breakpoints: (
 	}
 }
 
+//
 //  RESPOND BELOW
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 @mixin respond-below($breakpoint) {
@@ -36,7 +37,7 @@ $breakpoints: (
 		// Get the breakpoint value.
 		$breakpoint-value: map-get($breakpoints, $breakpoint);
 		// Write the media query.
-		@media (max-width: $breakpoint-value) {
+		@media (max-width: ($breakpoint-value - 0.02)) {
 			@content;
 		}
 		// If the breakpoint doesn't exist in the map.
@@ -46,6 +47,7 @@ $breakpoints: (
 	}
 }
 
+//
 //  RESPOND BETWEEN
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 // @include respond-between(sm, md) {}
@@ -56,7 +58,7 @@ $breakpoints: (
 		$lower-breakpoint: map-get($breakpoints, $lower);
 		$upper-breakpoint: map-get($breakpoints, $upper);
 		// Write the media query.
-		@media (min-width: $lower-breakpoint) and (max-width: $upper-breakpoint) {
+		@media (min-width: $lower-breakpoint) and (max-width: ($upper-breakpoint - 0.02)) {
 			@content;
 		}
 		// If one or both of the breakpoints don't exist.
