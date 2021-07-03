@@ -4,6 +4,20 @@
 	}
 }
 
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+.row {
+	margin-left: -15px;
+	margin-right: -15px;
+	> * {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+
 .round-10 {
 	border-radius: 10px;
 }

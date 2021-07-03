@@ -1,7 +1,7 @@
 
-.trading__card {
+.item__card {
     position: relative;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     z-index: 0;
     &:before,
     &:after {
@@ -31,7 +31,7 @@
         &:after {
             top: 10px;
         }
-        .trading__card__thumb {
+        .item__card__thumb {
             &:before {
                 opacity: 1;
             }

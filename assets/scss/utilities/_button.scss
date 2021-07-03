@@ -49,6 +49,18 @@ button.button {
 	}
 }
 
+.load__more {
+	text-align: center;
+	.button {
+		text-transform: uppercase;
+		color: $dark;
+		background: $grey2;
+		border-color: transparent;
+		font-weight: 600;
+		
+	}
+}
+
 // Alert color control
 @each $parent, $color in $theme-colors {
 	@include alert-emphasis-variant('.label__#{$parent}', $color);
