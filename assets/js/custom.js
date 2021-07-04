@@ -4,7 +4,7 @@ $( document ).ready(function() {
 
     /* Favourite Settings
     ..........................................*/
-    $('.trading__card .favourite').on('click', function(e) {
+    $('.item__card .favourite').on('click', function(e) {
         e.preventDefault();
         $(this).toggleClass('isFav');
     })
@@ -60,8 +60,8 @@ $( document ).ready(function() {
     }
     hello();
 
-    $('.top__chart__wrap .nav-link').on('show.bs.tab', function (e) {
-        e.preventDefault();
+    $('.top__chart__wrap .nav-link').on('show.bs.tab', function () {
+        // e.preventDefault();
         hello();
     });
 

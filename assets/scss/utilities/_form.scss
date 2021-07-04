@@ -1,0 +1,50 @@
+
+
+.bd-select {
+    position: relative;
+    select {
+        @include fontStyle(1.4rem, 400, $tundra);
+        @extend %bodyFont;
+        padding: 8px 30px 8px 12px;
+        border-radius: 8px;
+        border: 1px solid rgba($black, .08);
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        cursor: pointer;
+    }
+    .icon {
+        position: absolute;
+        top: 10px;
+        right: 12px;
+        color: $tundra;
+        pointer-events: none;
+        font-size: 1.4rem;
+    }
+}
+
+.form-control {
+    background: rgba($black, .08);
+    border-radius: 10px;
+    height: 45px;
+    padding: 0 20px;
+    @include fontStyle(1.4rem, 400, $grey);
+    @extend %bodyFont;
+    border: 0;
+    box-shadow: none;
+    outline: none;
+    @include placeholder {
+        color: $grey;
+    }
+    &:focus {
+        border: 0;
+        box-shadow: none;
+        outline: none;
+        background: rgba($black, .08);
+    }
+}
+
+form {
+    .button {
+        padding: 13.5px 44px;
+    }
+}

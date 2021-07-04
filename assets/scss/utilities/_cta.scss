@@ -1,0 +1,69 @@
+
+.call__to__action {
+    position: relative;
+    z-index: 0;
+    &:before,
+    &:after {
+        position: absolute;
+        top: 40%;
+        transform: translateY(-50%);
+        z-index: -1;
+    }
+    &:before {
+        left: 0;
+        content: url('../img/cta-left.png');
+    }
+    &:after {
+        right: 0;
+        content: url('../img/cta-right.png');
+    }
+}
+
+.cta__content {
+    h2 {
+        @include fontStyle(var(--h2-fontsize), 700, $dark);
+        @extend %headerFont;
+        margin-bottom: 30px;
+    }
+    p {
+        @include fontStyle(1.4rem, 400, $tundra);
+        @extend %bodyFont;
+        margin-bottom: 40px;
+    }
+    .button {
+        border: 0;
+        color: $white;
+        padding: 20.5px 44px;
+        position: relative;
+        background: transparent;
+        z-index: 0;
+        &:after,
+        &:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            content: '';
+            z-index: -1;
+            border-radius: 10px;
+            transition: all .3s ease;
+        }
+        &::before {
+            @extend %gradient;
+            opacity: 1;
+        }
+        &::after {
+            @extend %gradientRiv;
+            opacity: 0;
+        }
+        &:hover {
+            &::before {
+                opacity: 0;
+            }
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+}

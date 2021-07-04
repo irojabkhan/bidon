@@ -1,0 +1,36 @@
+
+.hero__content {
+    h1 {
+        @include fontStyle(var(--h1-fontsize), 700, $dark);
+        @extend %headerFont;
+        margin-bottom: 20px;
+        span {
+            @extend %gradientText;
+            display: flex;
+            align-items: center;
+            img {
+                margin-left: 20px;
+            }
+        }
+    }
+    p {
+        @include fontStyle(1.8rem, 400, $dark);
+        @extend %bodyFont;
+        margin-bottom: 35px;
+    }
+}
+
+.hero__thumb {
+    position: relative;
+    z-index: 0;
+    .hero__thumb {
+        position: relative;
+        z-index: 1;
+    }
+    .hero__shadow {
+        position: absolute;
+        z-index: -1;
+        top: 25%;
+        left: -80px;
+    }
+}
