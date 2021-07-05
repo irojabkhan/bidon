@@ -22,6 +22,9 @@
 		color: $white;
 		border-color: $primary;
 	}
+	@include respond-below(lg) {
+		padding: 16px 44px;
+	}
 }
 
 

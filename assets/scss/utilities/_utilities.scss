@@ -21,3 +21,9 @@
 .round-10 {
 	border-radius: 10px;
 }
+
+@include respond-below(lg) {
+	.md-mt30 {
+		margin-top: 30px;
+	}
+}

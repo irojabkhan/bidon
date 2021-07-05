@@ -4,25 +4,35 @@
         @include fontStyle(var(--h1-fontsize), 700, $dark);
         @extend %headerFont;
         margin-bottom: 20px;
+        @include respond-below(sm) {
+            br {
+                display: none;
+            }
+        }
         span {
             @extend %gradientText;
-            display: flex;
-            align-items: center;
             img {
-                margin-left: 20px;
+                margin-left: 10px;
+                margin-top: -10px;
+                @include respond-below(md) {
+                    height: 35px;
+                }
             }
         }
     }
     p {
-        @include fontStyle(1.8rem, 400, $dark);
+        @include fontStyle(var(--h4-fontsize), 400, $dark);
         @extend %bodyFont;
         margin-bottom: 35px;
     }
 }
 
-.hero__thumb {
+.hero__thumb__area {
     position: relative;
     z-index: 0;
+    @include respond-below(lg) {
+        display: none;
+    }
     .hero__thumb {
         position: relative;
         z-index: 1;

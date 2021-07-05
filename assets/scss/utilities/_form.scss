@@ -2,6 +2,7 @@
 
 .bd-select {
     position: relative;
+    display: inline-block;
     select {
         @include fontStyle(1.4rem, 400, $tundra);
         @extend %bodyFont;

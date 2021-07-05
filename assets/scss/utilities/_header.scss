@@ -12,5 +12,11 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @include respond-below(sm) {
+            display: block;
+            div:last-child {
+                margin-top: 20px;
+            }
+        }
     }
 }

@@ -37,6 +37,9 @@
         position: relative;
         background: transparent;
         z-index: 0;
+        @include respond-below(lg) {
+            padding: 18px 44px;
+        }
         &:after,
         &:before {
             position: absolute;

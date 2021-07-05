@@ -2,6 +2,12 @@
 $( document ).ready(function() {
     "use strict"
 
+    $('.js-tilt').tilt({
+        // scale: 1.1,
+        glare: true,
+        maxGlare: 0.1
+    });
+
     /* Favourite Settings
     ..........................................*/
     $('.item__card .favourite').on('click', function(e) {
