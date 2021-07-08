@@ -3,7 +3,6 @@ $( document ).ready(function() {
     "use strict"
 
     $('.js-tilt').tilt({
-        // scale: 1.1,
         glare: true,
         maxGlare: 0.1
     });
@@ -27,48 +26,58 @@ $( document ).ready(function() {
 
     /* OwlCarousel
     ..........................................*/
-      $(".trending__card__carousel").owlCarousel({
-        loop:true,
-        margin:30,
-        nav:true,
-        navText: ['<i class="fas fa-angle-left"></i>', '<i class="fas fa-angle-right"></i>'],
-        dots: false,
-        autoplay: true,
-        autoplayHoverPause: true,
-        responsive:{
-            0:{
-                items:1
-            },
-            576:{
-                items:2
-            },
-            992:{
-                items:3
-            },
-            1200:{
-                items:4
+        $(".trending__card__carousel").owlCarousel({
+            loop:false,
+            margin:30,
+            nav:true,
+            navText: ['<i class="fas fa-angle-left"></i>', '<i class="fas fa-angle-right"></i>'],
+            dots: false,
+            autoplay: true,
+            autoplayHoverPause: true,
+            responsive:{
+                0:{
+                    items:1
+                },
+                576:{
+                    items:2
+                },
+                992:{
+                    items:3
+                },
+                1200:{
+                    items:4
+                }
             }
-        }
-      });
+        });
+
+        $(".explore__item__slider").owlCarousel({
+            items: 1,
+            loop:false,
+            nav:true,
+            navText: ['<i class="fas fa-angle-left"></i>', '<i class="fas fa-angle-right"></i>'],
+            dots: false,
+            autoplay: true,
+            autoplayHoverPause: true,
+        });
+
 
     /* Marquee Js
     ..........................................*/
-    function hello() {
+    function tabMaruee() {
         $('.top__chart').marquee({
-            duration: 5000,
             gap: 50,
             delayBeforeStart: 0,
             direction: 'left',
             pauseOnHover: true,
             speed: 100,
+            startVisible: true,
             duplicated: false
         });
     }
-    hello();
+    tabMaruee();
 
-    $('.top__chart__wrap .nav-link').on('show.bs.tab', function () {
-        // e.preventDefault();
-        hello();
-    });
+    $('.top__chart__wrap button').on('shown.bs.tab', function (e) {
+        tabMaruee();
+    })
 
 });
