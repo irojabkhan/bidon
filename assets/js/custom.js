@@ -14,6 +14,14 @@ $( document ).ready(function() {
         $(this).toggleClass('isFav');
     })
 
+
+    /* Custom Filter Settings
+    ..........................................*/
+    $('.collapse__toggler').on('click', function(e) {
+        e.preventDefault();
+        $(this).parents().children('.filter__body').slideToggle();
+    })
+
     /* CountDown Js
     ..........................................*/
     $('[data-countdown]').each(function() {
@@ -22,7 +30,7 @@ $( document ).ready(function() {
             var totalHours = event.offset.totalDays;
             $(this).html(event.strftime(totalHours + 'D &nbsp; %HH &nbsp; %MM &nbsp; LEFT'));
         });
-      });
+    });
 
     /* OwlCarousel
     ..........................................*/
