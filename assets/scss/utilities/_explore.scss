@@ -204,3 +204,184 @@
         }
     }
 }
+
+.explore__tab__filter {
+    margin-bottom: 30px;
+    .button {
+        @include fontStyle(1.4rem, 400, $dark);
+        padding: 8.5px 15px;
+        border-radius: 8px;
+        background: transparent;
+        border: 2px solid transparent;
+        &:hover,
+        &.active {
+            border-color: rgba($black, 0.1);
+            background: $white;
+        }
+    }
+}
+
+
+.custom__filter__wrap {
+    .filter__option {
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+        .filter__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .title {
+                @include fontStyle(1.4rem, 400, $dark);
+                @extend %bodyFont;
+                text-transform: uppercase;
+            }
+            .collapse__toggler {
+                color: $grey;
+            }
+        }
+        .filter__body {
+            margin-top: 15px;
+            .bd-select {
+                display: block;
+                select {
+                    width: 100%;
+                    padding: 10px 30px 10px 12px;
+                }
+            }
+            .filter__by__category {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                li {
+                    &:not(:last-child) {
+                        margin-bottom: 13px;
+                    }
+                    label {
+                        input {
+                            display: none;
+                            &:checked {
+                                & ~ p {
+                                    &::before {
+                                        background: $primary;
+                                    }
+                                    &::after {
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                        }
+                        p {
+                            @include fontStyle(1.4rem, 400, $dark);
+                            @extend %bodyFont;
+                            position: relative;
+                            padding-left: 30px;
+                            &::before {
+                                position: absolute;
+                                top: 4px;
+                                left: 0;
+                                height: 16px;
+                                width: 16px;
+                                border-radius: 5px;
+                                border: 2px solid rgba($black, 0.1);
+                                background: $white;
+                                content: '';
+                                cursor: pointer;
+                            }
+                            &::after {
+                                position: absolute;
+                                top: 5px;
+                                left: 4px;
+                                content: "\f00c";
+                                font-family: 'Font Awesome 5 Free';
+                                font-weight: 900;
+                                font-size: .85rem;
+                                cursor: pointer;
+                                opacity: 0;
+                                color: $white;
+                            }
+                            span {
+                                color: $grey;
+                                margin-left: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+            .filter__by__coin {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                li {
+                    &:not(:last-child) {
+                        margin-bottom: 13px;
+                    }
+                    label {
+                        input {
+                            display: none;
+                            &:checked {
+                                ~ p span {
+                                    &:before {
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                        }
+                        p {
+                            display: flex;
+                            align-items: center;
+                            img {
+                                height: 20px;
+                                width: 20px;
+                                border-radius: 50%;
+                                margin-right: 10px;
+                            }
+                            span {
+                                @include fontStyle(1.4rem, 400, $tundra);
+                                @extend %bodyFont;
+                                position: relative;
+                                padding-right: 20px;
+                                &::before {
+                                    position: absolute;
+                                    top: 2px;
+                                    right: 0;
+                                    content: '\f00c';
+                                    font-family: 'Font Awesome 5 Free';
+                                    font-weight: 900;
+                                    color: $grey;
+                                    opacity: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .filter__by__price {
+                .bd-select {
+                    margin-bottom: 20px;
+                }
+                .filter__price__range {
+                    display: flex;
+                    .form-group {
+                        flex: 0 0 100px;
+                        &:not(:last-child) {
+                            margin-right: 20px;
+                        }
+                        .form-control {
+                            background: $white;
+                            border: 1px solid rgba($black, .08);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .button {
+        border-radius: 8px;
+        background: $grey2;
+        padding: 15.5px 30px;
+        border: 0;
+        text-transform: uppercase;
+        @include fontStyle(1.4rem, 600, $grey);
+    }
+}

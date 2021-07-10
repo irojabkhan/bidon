@@ -26,39 +26,62 @@ $( document ).ready(function() {
 
     /* OwlCarousel
     ..........................................*/
-        $(".trending__card__carousel").owlCarousel({
-            loop:false,
-            margin:30,
-            nav:true,
-            navText: ['<i class="fas fa-angle-left"></i>', '<i class="fas fa-angle-right"></i>'],
-            dots: false,
-            autoplay: true,
-            autoplayHoverPause: true,
-            responsive:{
-                0:{
-                    items:1
-                },
-                576:{
-                    items:2
-                },
-                992:{
-                    items:3
-                },
-                1200:{
-                    items:4
-                }
+    $(".trending__card__carousel").owlCarousel({
+        loop:false,
+        margin:30,
+        nav:true,
+        navText: ['<i class="fas fa-angle-left"></i>', '<i class="fas fa-angle-right"></i>'],
+        dots: false,
+        autoplay: true,
+        autoplayHoverPause: true,
+        responsive:{
+            0:{
+                items:1
+            },
+            576:{
+                items:2
+            },
+            992:{
+                items:3
+            },
+            1200:{
+                items:4
             }
-        });
+        }
+    });
 
-        $(".explore__item__slider").owlCarousel({
-            items: 1,
-            loop:false,
-            nav:true,
-            navText: ['<i class="fas fa-angle-left"></i>', '<i class="fas fa-angle-right"></i>'],
-            dots: false,
-            autoplay: true,
-            autoplayHoverPause: true,
+    $(".explore__item__slider").owlCarousel({
+        items: 1,
+        loop:false,
+        nav:true,
+        navText: ['<i class="fas fa-angle-left"></i>', '<i class="fas fa-angle-right"></i>'],
+        dots: false,
+        autoplay: true,
+        autoplayHoverPause: true,
+    });
+
+    /*-------------------------------------
+    Isotope
+    -------------------------------------*/
+    var $grid = $('.grid').isotope({
+        itemSelector: '.discover__item',
+        layoutMode: 'fitRows'
+    });
+
+    // layout Isotope after each image loads
+    $grid.imagesLoaded().progress(function () {
+        $grid.isotope('layout');
+    });
+
+    // filter items on button click
+    $('#filters').on('click', 'button', function () {
+        var filterValue = $(this).attr('data-filter');
+        $(this).siblings('button').removeClass('active');
+        $(this).addClass('active');
+        $grid.isotope({
+            filter: filterValue
         });
+    });
 
 
     /* Marquee Js
