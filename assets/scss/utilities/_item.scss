@@ -359,6 +359,9 @@
         padding: 12px 0;
         display: flex;
         margin-bottom: 30px;
+        @include respond-below(xs) {
+            display: block;
+        }
         .item__owner {
             flex: 1 1 50%;
             display: flex;
@@ -392,6 +395,11 @@
                     }
                 }
             }
+            &.item__collection {
+                @include respond-below(xs) {
+                    margin-top: 15px;
+                }
+            }
         }
     }
     .details__info {
@@ -399,6 +407,9 @@
         align-items: center;
         flex-wrap: wrap;
         margin-bottom: 30px;
+        @include respond-below(xs) {
+            display: block;
+        }
         .price__wrap,
         .bid__wrap {
             flex: 0 0 calc(50% - 15px);
@@ -420,10 +431,21 @@
         .price__wrap {
             margin-right: auto;
         }
+        .bid__wrap {
+            @include respond-below(xs) {
+                margin-top: 15px;
+            }
+        }
     }
     .bid__info {
         display: flex;
         align-items: center;
+        @include respond-below(sm) {
+            display: block;
+        }
+        &.no__auction {
+            display: block;
+        }
         .button,
         .bid__end__in {
             flex: 0 0 calc(50% - 15px);
@@ -529,6 +551,9 @@
                 }
                 &:not(:last-child) {
                     margin-right: 30px;
+                    @include respond-below(xs) {
+                        margin-right: 20px;
+                    }
                 }
             }
         }
@@ -544,7 +569,7 @@
                     @extend %bodyFont;
                     margin-bottom: 7px;
                     span {
-                        flex: 0 0 180px;
+                        flex: 0 1 180px;
                     }
                 }
             }

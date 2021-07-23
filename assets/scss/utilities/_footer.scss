@@ -180,7 +180,7 @@
             margin-right: 20px;
             select {
                 padding: 10px 30px 10px 12px;
-                background: transparent;
+                background: $white;
                 color: #222;
             }
         }
@@ -194,6 +194,7 @@
                 text-align: center;
                 font-size: 1.4rem;
                 color: rgba($black, .4);
+                background: $white;
                 &:hover {
                     background: $primary;
                     border-color: $primary;
