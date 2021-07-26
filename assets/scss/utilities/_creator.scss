@@ -34,6 +34,7 @@
         }
     }
 }
+
 .creator {
     background: $white;
     border-radius: 15px;
@@ -109,4 +110,207 @@
     }
 }
 
+.creator__info {
+    margin-top: -205px;
+    margin-bottom: 30px;
+    @include respond-below(sm) {
+        margin-top: -160px;
+    }
+    .creator__thumb {
+        border-radius: 50%;
+        border: 15px solid $liteGrey;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        height: 210px;
+        width: 210px;
+        overflow: hidden;
+        margin-bottom: 20px;
+        @include respond-below(sm) {
+            height: 120px;
+            width: 120px;
+            border-width: 8px;
+        }
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+    .creator__body {
+        h3 {
+            @include fontStyle(var(--h3-fontsize), 700, $dark);
+            @extend %headerFont;
+            i {
+                font-size: 24px;
+                @extend %gradientText;
+            }
+        }
+        .username {
+            @include fontStyle(1.4rem, 400, $grey);
+            @extend %bodyFont;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+        .code {
+            @include fontStyle(1.4rem, 400, $dark);
+            @extend %bodyFont;
+            margin-bottom: 15px;
+            .copy {
+                color: $grey;
+            }
+        }
+        .title {
+            @include fontStyle(1.6rem, 600, $dark);
+            @extend %bodyFont;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+        .bio {
+            @include fontStyle(1.4rem, 400, $tundra);
+            @extend %bodyFont;
+            margin-bottom: 20px;
+        }
+        .account__info {
+            display: flex;
+            margin-bottom: 20px;
+            .info {
+                flex: 0 1 50%;
+                p {
+                    @include fontStyle(1.6rem, 600, $dark);
+                    @extend %bodyFont;
+                    line-height: 1.5;
+                }
+                span {
+                    @include fontStyle(1.4rem, 400, $dark);
+                    @extend %bodyFont;
+                }
+            }
+        }
+        .button {
+            margin-bottom: 20px;
+        }
+        .more__accounts {
+            ul {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                display: flex;
+                flex-wrap: wrap;
+                li {
+                    &:not(:last-child) {
+                        margin-right: 30px;
+                    }
+                    a {
+                        font-size: 1.8rem;
+                        color: $grey;
+                        &:hover {
+                            @extend %gradientText;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
+.become__creator {
+    h2 {
+        @include fontStyle(var(--h3-fontsize), 700, $dark);
+        @extend %headerFont;
+        margin-bottom: 20px;
+    }
+    >p {
+        @include fontStyle(1.4rem, 400, $tundra);
+        @extend %bodyFont;
+        margin-bottom: 20px;
+    }
+    h5 {
+        @include fontStyle(1.4rem, 600, $tundra);
+        @extend %bodyFont;
+        margin-bottom: 10px;
+    }
+    .guidline__list {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        li {
+            @include fontStyle(1.4rem, 400, $tundra);
+            @extend %bodyFont;
+            padding-left: 20px;
+            position: relative;
+            &:not(:last-child) {
+                margin-bottom: 5px;
+            }
+            &::before {
+                position: absolute;
+                top: 2px;
+                left: 0;
+                content: '\f00c';
+                font-family: 'Font Awesome 5 Free';
+                font-weight: 900;
+                color: $grey;
+            }
+        }
+    }
+    form {
+        margin-top: 25px;
+    }
+}
+
+.interested__items {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    li {
+        &:not(:last-child) {
+            margin-bottom: 13px;
+        }
+        label {
+            input {
+                display: none;
+                &:checked {
+                    & ~ p {
+                        &::before {
+                            background: $primary;
+                        }
+                        &::after {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+            p {
+                @include fontStyle(1.4rem, 400, $dark);
+                @extend %bodyFont;
+                position: relative;
+                padding-left: 30px;
+                &::before {
+                    position: absolute;
+                    top: 4px;
+                    left: 0;
+                    height: 16px;
+                    width: 16px;
+                    border-radius: 5px;
+                    border: 2px solid rgba($black, 0.1);
+                    background: $white;
+                    content: '';
+                    cursor: pointer;
+                }
+                &::after {
+                    position: absolute;
+                    top: 5px;
+                    left: 4px;
+                    content: "\f00c";
+                    font-family: 'Font Awesome 5 Free';
+                    font-weight: 900;
+                    font-size: .85rem;
+                    cursor: pointer;
+                    opacity: 0;
+                    color: $white;
+                }
+                span {
+                    color: $grey;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}

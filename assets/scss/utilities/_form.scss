@@ -44,8 +44,156 @@
     }
 }
 
+textarea.form-control {
+    height: 110px;
+    resize: none;
+    padding-top: 14px;
+}
+
 form {
     .button {
         padding: 13.5px 44px;
+    }
+}
+
+form {
+    label + input,
+    label + textarea {
+        margin-top: 7px;
+    }
+    label {
+        @include fontStyle(1.4rem, 600, $dark);
+    }
+}
+
+.become__creator {
+    .form-control {
+        background: $white;
+        border: 1px solid rgba($black, .08);
+        height: 55px;
+        @include placeholder {
+            color: $grey;
+        }
+        color: $dark;
+    }
+    label + .row {
+        margin-top: 7px;
+    }
+    label {
+        span {
+            color: $grey;
+        }
+    }
+    textarea.form-control {
+        height: 110px;
+    }
+    .input-group {
+        .input-group-text {
+            background: $white;
+            padding: 0 20px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            color: $grey;
+            font-size: 1.6rem;
+            border: 1px solid rgba($black, .08);
+        }
+    }
+    .interested__item {
+        margin-top: 10px;
+        margin-bottom: 25px;
+        > p {
+            @include fontStyle(1.4rem, 600, $dark);
+            margin-bottom: 20px;
+        }
+    }
+    .button {
+        margin-top: 10px;
+        margin-right: auto;
+        border: 0;
+        color: $white;
+        padding: 18.5px 44px;
+        position: relative;
+        background: transparent;
+        z-index: 0;
+        font-weight: 700;
+        text-transform: uppercase;
+        @include respond-below(lg) {
+            padding: 18px 44px;
+        }
+        &:after,
+        &:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            content: '';
+            z-index: -1;
+            border-radius: 10px;
+            transition: all .3s ease;
+        }
+        &::before {
+            @extend %gradient;
+            opacity: 1;
+        }
+        &::after {
+            @extend %gradientRiv;
+            opacity: 0;
+        }
+        &:hover {
+            &::before {
+                opacity: 0;
+            }
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+    .upload__file {
+        background: $white;
+        border: 1px dashed rgba($black, .15);
+        border-radius: 10px;
+        height: 200px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: $grey;
+        margin-top: 5px;
+        input {
+            display: none;
+        }
+        img {
+            margin-bottom: 10px;
+        }
+    }
+    .sales__cateogry {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 15px;
+        label {
+            flex: 0 0 calc(33.33% - 20px);
+            input {
+                display: none;
+                &:checked {
+                    ~ span {
+                        border:2px solid rgba($primary, .5);
+                    }
+                }
+            }
+            span {
+                padding: 15px 15px;
+                text-align: center;
+                @include fontStyle(1.4rem, 400, $dark);
+                background: $white;
+                border: 1px solid rgba($black, .08);
+                border-radius: 10px;
+                display: inline-block;
+                width: 100%;
+            }
+        }
     }
 }

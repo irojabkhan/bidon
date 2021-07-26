@@ -14,6 +14,12 @@ $( document ).ready(function() {
         $(this).toggleClass('isFav');
     })
 
+    /* Page Share Settings
+    ..........................................*/
+    $('.page__header__button .icon').on('click', function() {
+        $(this).siblings('.dropdown__elem').fadeToggle();
+        console.log('hello');
+    })
 
     /* Custom Filter Settings
     ..........................................*/

@@ -1,0 +1,87 @@
+
+
+.activity__list {
+    .activity__item {
+        background: $white;
+        border-radius: 15px;
+        border: 1px solid rgba($black, .06);
+        padding: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include respond-below(md) {
+            padding: 15px;
+        }
+        @include respond-below(xs) {
+            display: block;
+        }
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+        .thumb {
+            height: 50px;
+            width: 50px;
+            min-width: 50px;
+            flex: 0 0 50px;
+            margin-right: 20px;
+            border-radius: 50%;
+            overflow: hidden;
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        .activity__content {
+            flex: 1 1 auto;
+            padding-right: 10px;
+            @include respond-below(xs) {
+                padding-top: 15px;
+                margin-bottom: 10px;
+            }
+            h5 {
+                @include fontStyle(1.4rem, 600, $dark);
+                @extend %bodyFont;
+                .verified {
+                    margin-left: 5px;
+                    i {
+                        @extend %gradientText;
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+            p {
+                @include fontStyle(1.4rem, 400, $tundra);
+                @extend %bodyFont;
+                a {
+                    font-weight: 600;
+                }
+            }
+        }
+        .activity__type {
+            flex: 0 0 120px;
+            padding-right: 10px;
+            @include respond-below(xl) {
+                flex: 0 0 100px;
+            }
+            p {
+                @include fontStyle(1.4rem, 400, $tundra);
+                @extend %bodyFont;
+            }
+        }
+        .activity__time {
+            flex: 0 0 180px;
+            text-align: right;
+            @include respond-below(xl) {
+                flex: 0 0 120px;
+            }
+            @include respond-below(xs) {
+                text-align: left;
+            }
+            p {
+                @include fontStyle(1.4rem, 400, $tundra);
+                @extend %bodyFont;
+            }
+        }
+    }
+}

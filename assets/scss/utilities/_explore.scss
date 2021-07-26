@@ -239,6 +239,13 @@
             .collapse__toggler {
                 color: $grey;
             }
+            .activity__reset {
+                @include fontStyle(1.2rem, 400, $grey);
+                text-transform: uppercase;
+                i {
+                    margin-right: 3px;
+                }
+            }
         }
         .filter__body {
             margin-top: 15px;
@@ -407,11 +414,14 @@
     }
     .custom__filter__wrap {
         flex: 0 0 calc(25% - 15px);
-        @include respond-below(lg) {
-            margin-top: 50px;
-        }
     }
     .explore__items {
         flex: 0 0 calc(75% - 15px);
+    }
+}
+
+.custom__filter__wrap {
+    @include respond-below(lg) {
+        margin-top: 50px;
     }
 }
