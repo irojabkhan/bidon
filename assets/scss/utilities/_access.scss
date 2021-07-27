@@ -1,0 +1,115 @@
+
+.access__card {
+    background: $white;
+    padding: var(--padding50);
+    border: 1px solid rgba($black, .06);
+    border-radius: 15px;
+    position: relative;
+    h3 {
+        @include fontStyle(var(--h3-fontsize), 700, $dark);
+        @extend %headerFont;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    p {
+        @include fontStyle(1.4rem, 400, $tundra);
+        text-align: center;
+        max-width: 350px;
+        margin: 0 auto 25px;
+    }
+    .form-control {
+        background: $white;
+        border: 1px solid rgba($black, .1);
+        height: 55px;
+        @include respond-below(lg) {
+            height: 50px;
+        }
+    }
+
+    .button {
+        border: 0;
+        color: $white;
+        padding: 20.5px 44px;
+        position: relative;
+        background: transparent;
+        z-index: 0;
+        @include respond-below(lg) {
+            padding: 18px 44px;
+        }
+        &:after,
+        &:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            content: '';
+            z-index: -1;
+            border-radius: 10px;
+            transition: all .3s ease;
+        }
+        &::before {
+            @extend %gradient;
+            opacity: 1;
+        }
+        &::after {
+            @extend %gradientRiv;
+            opacity: 0;
+        }
+        &:hover {
+            &::before {
+                opacity: 0;
+            }
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+    .alternate__access {
+        margin-bottom: 0;
+        margin-top: 20px;
+        a {
+            color: $primary;
+        }
+    }
+}
+
+.access__card__wrap {
+    position: relative;
+
+    z-index: 0;
+    &::before {
+        position: absolute;
+        bottom: -190px;
+        left: 50%;
+        transform: translateX(-50%);
+        content: url('../img/blur-2.png');
+        z-index: -1;
+        // max-width: 100%;
+    }
+}
+
+.o-hidden {
+    overflow: hidden;
+}
+
+.flex__div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include respond-below(xs) {
+        display: block;
+        .input__checkbox {
+            display: block;
+        }
+        a {
+            margin-top: 10px;
+        }
+    }
+    a {
+        @include fontStyle(1.4rem, 400, $tundra);
+        &:hover {
+            color: $primary;
+        }
+    }
+}

@@ -1,0 +1,40 @@
+
+.post__grid {
+    margin-bottom: 30px;
+    &:hover {
+        .post__body {
+            h4 {
+                color: $primary;
+            }
+        }
+    }
+    .post__thumb {
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+        overflow: hidden;
+        a, img {
+            width: 100%;
+        }
+    }
+    .post__body {
+        background: $white;
+        border: 1px solid rgba($black, .06);
+        border-top: 0;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        padding: 25px;
+        h4 {
+            @include fontStyle(var(--h4-fontsize), 700, $dark);
+            @extend %headerFont;
+            margin-bottom: 10px;
+        }
+        p {
+            @include fontStyle(1.4rem, 400, $tundra);
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+        .post__time {
+            @include fontStyle(1.4rem, 400, $grey);
+        }
+    }
+}

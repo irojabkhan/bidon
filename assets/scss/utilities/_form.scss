@@ -76,7 +76,9 @@ form {
         }
         color: $dark;
     }
-    label + .row {
+    label + .row,
+    label + .input-group,
+    label + .bd-select {
         margin-top: 7px;
     }
     label {
@@ -87,6 +89,10 @@ form {
     textarea.form-control {
         height: 110px;
     }
+
+    .extra__text {
+        @include fontStyle(1.2rem, 400, $grey);
+    }
     .input-group {
         .input-group-text {
             background: $white;
@@ -96,6 +102,61 @@ form {
             color: $grey;
             font-size: 1.6rem;
             border: 1px solid rgba($black, .08);
+        }
+        .dropdown-toggle {
+            background: $white;
+            min-width: 210px;
+            border: 1px solid rgba($black, .08);
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            outline: none;
+            box-shadow: none;
+            font-size: 1.4rem;
+            text-align: left;
+            padding: 10px 20px;
+            color: $grey;
+            &::after {
+                border: 0;
+            }
+            &::before {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 20px;
+                content: "\f107";
+                font-family: 'Font Awesome 5 Free';
+                font-weight: 900;
+            }
+        }
+        .dropdown-menu {
+            background: $white;
+            border: 1px solid rgba($black, .06);
+            border-radius: 10px;
+            box-shadow: 0px 10px 20px rgba($black, 0.05);
+            min-width: 210px;
+            padding: 15px;
+            li {
+                a {
+                    padding: 6px 0;
+                    @include fontStyle(1.4rem, 400, $tundra);
+                    &:hover {
+                        background: $white;
+                    }
+                }
+                &.selected {
+                    a {
+                        @include fontStyle(1.4rem, 600, $dark);
+                    }
+                }
+            }
+        }
+    }
+    .bd-select {
+        width: 100%;
+        .icon {
+            top: 16px;
+            right: 15px;
+            color: $grey;
         }
     }
     .interested__item {
@@ -173,7 +234,7 @@ form {
     .sales__cateogry {
         display: flex;
         justify-content: space-between;
-        margin-top: 15px;
+        margin-top: 7px;
         label {
             flex: 0 0 calc(33.33% - 20px);
             input {
@@ -194,6 +255,54 @@ form {
                 display: inline-block;
                 width: 100%;
             }
+        }
+    }
+}
+
+.input__checkbox {
+    input {
+        display: none;
+        &:checked {
+            ~ span {
+                &::before {
+                    background: $primary;
+                    border-color: $primary;
+                }
+                &::after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    span {
+        @include fontStyle(1.4rem, 400, $tundra);
+        position: relative;
+        padding-left: 25px;
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 16px;
+            width: 16px;
+            border-radius: 5px;
+            border: 2px solid rgba($black, .1);
+            content: '';
+            transition: all .3s ease;
+        }
+        &::after {
+            position: absolute;
+            top: 2px;
+            left: 4px;
+            content: "\f00c";
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            font-size: 8px;
+            opacity: 0;
+            color: $white;
+            transition: all .3s ease;
+        }
+        a {
+            font-weight: 600;
         }
     }
 }
