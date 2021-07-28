@@ -38,3 +38,162 @@
         }
     }
 }
+
+.blog__hero__bg {
+    background: url(../img/blog-hero.jpg) no-repeat center;
+    background-size: cover;
+    position: relative;
+    &::before {
+        background: linear-gradient(180deg, rgba($black, 0) 0%, rgba($black, 0.7) 100%);
+    }
+}
+
+.blog__details__header {
+    padding-top: 30%;
+    position: relative;
+    padding-bottom: 30px;
+    h2 {
+        @include fontStyle(var(--h2-fontsize), 700, $white);
+        max-width: 700px;
+        margin-bottom: 30px;
+    }
+    .blog__details__meta {
+        a, span {
+            @include fontStyle(1.4rem, 500, $white);
+            text-transform: uppercase;
+            margin-right: 20px;
+            i {
+                margin-right: 3px;
+            }
+        }
+    }
+    .blog__go__down {
+        position: absolute;
+        bottom: 30px;
+        right: 0;
+        color: $white;
+        font-size: 1.8rem;
+        line-height: 1;
+    }
+}
+
+.blog__share {
+    top: 60px;
+    ul {
+        li {
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+            a {
+                font-size: 1.8rem;
+                color: $grey;
+            }
+        }
+    }
+}
+
+.blog__details {
+    margin-bottom: 40px;
+    p {
+        @include fontStyle(1.4rem, 400, $tundra);
+        @extend %bodyFont;
+        line-height: 1.8;
+        &.main__para {
+            @include fontStyle(1.8rem, 600, $dark);
+        }
+    }
+    p + p,
+    p + blockquote,
+    blockquote + p,
+    .blog__details__thumb + p,
+    p + .blog__details__thumb,
+    blockquote + .blog__details__thumb,
+    .blog__details__thumb + blockquote {
+        margin-top: 30px;
+    }
+    blockquote {
+        @include fontStyle(1.8rem, 500, $black);
+        font-style: italic;
+        @extend %bodyFont;
+    }
+}
+
+.post__tags {
+    a {
+        background: $white;
+        @include fontStyle(1.2rem, 400, $tundra);
+        font-style: italic;
+        border: 1px solid rgba($black, .08);
+        border-radius: 10px;
+        margin-right: 10px;
+        padding: 6.5px 16px;
+    }
+}
+
+.widget {
+    &:not(:last-child) {
+        margin-bottom: 50px;
+    }
+    .widget__title {
+        @include fontStyle(1.8rem, 700, $black);
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+}
+
+.widget__popular__post {
+    .populer__posts {
+        .post__item {
+            display: flex;
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+            .post__thumb {
+                flex: 0 0 90px;
+                height: 80px;
+                min-width: 90px;
+                border-radius: 10px;
+                overflow: hidden;
+                margin-right: 20px;
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+            .post__body {
+                h4 {
+                    @include fontStyle(1.6rem, 600, $dark);
+                    @extend %headerFont;
+                    margin-bottom: 10px;
+                }
+                span {
+                    @include fontStyle(1.2rem, 500, $grey);
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
+
+.insta__gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 100px);
+    grid-template-rows: 90px;
+    grid-auto-rows: 90px;
+    grid-gap: 15px;
+    .insta__gallery__item {
+        border-radius: 10px;
+        overflow: hidden;
+        font-size: 0;
+        a {
+            display: block;
+            height: 100%;
+        }
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
