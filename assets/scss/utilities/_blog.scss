@@ -104,6 +104,9 @@
             a {
                 font-size: 1.8rem;
                 color: $grey;
+                &:hover {
+                    color: $primary;
+                }
             }
         }
     }
@@ -135,8 +138,25 @@
         @include fontStyle(1.8rem, 500, $black);
         font-style: italic;
         @extend %bodyFont;
+        position: relative;
+        padding-left: 40px;
         @include respond-below(md) {
             font-size: 1.6rem;
+        }
+        &:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: url('../img/quote.png');
+        }
+        &::after {
+            position: absolute;
+            top: 30px;
+            left: 0;
+            width: 20px;
+            bottom: 0;
+            background: $primary;
+            content: '';
         }
     }
 }
@@ -355,3 +375,4 @@
         }
     }
 }
+

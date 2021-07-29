@@ -69,7 +69,7 @@
                                 </div>
                             </div>
                             <div class="bid__info">
-                                <a href="#" class="button button__block round-10">Place a Bid</a>
+                                <a href="#" class="button button__block round-10" data-bs-toggle="modal" data-bs-target="#bidModal">Place a Bid</a>
                                 <div class="bid__end__in">Auction ends in &nbsp; <sapn data-countdown="2021/09/21"></sapn></div>
                             </div>
                             <p class="loyality__info">10% royalty goes to the creator for future resale </p>
@@ -464,6 +464,53 @@
 
     </div>
 
+    <!-- Modal -->
+    <div class="modal fade" id="bidModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="modal__bid">
+                        <h3 class="modal__title">Place a bid</h3>
+                        <p class="item__name">You are bidding on <span>Zero Gravity 1 of 1 by @Edward Stewart</span></p>
+                        <p class="bid__suggestion">Your Bid <span> Minimum 0.027 ETH  (~$288.50)</span></p>
+                        <div class="input-group mb30">
+                            <input type="text" class="form-control" placeholder="Enter bid amount" aria-label="Text input with dropdown button">
+                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">ETH (Ethereum)</button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li class="selected"><a class="dropdown-item" href="#">ETH (Ethereum)</a></li>
+                                <li><a class="dropdown-item" href="#">LTC (Litecoin)</a></li>
+                                <li><a class="dropdown-item" href="#">BCH (Bitcoin Cash)</a></li>
+                                <li><a class="dropdown-item" href="#">DASH (Dash)</a></li>
+                                <li><a class="dropdown-item" href="#">ADA (Cardano)</a></li>
+                            </ul>
+                        </div>
+                        <div class="bid__balance__info">
+                            <ul>
+                                <li>
+                                    <span>Your balance <span>deposit</span></span>
+                                    <span>2.586 ETH</span>
+                                </li>
+                                <li>
+                                    <span>Total bid Amount</span>
+                                    <span>0.027 ETH</span>
+                                </li>
+                                <li>
+                                    <span>Service Fee (3%)</span>
+                                    <span>0.0012 ETH</span>
+                                </li>
+                                <li>
+                                    <span>You will pay</span>
+                                    <span>0.028 ETH</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="#" class="button button__primary button__block round-10">Place a Bid</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/jquery.min.js"></script>

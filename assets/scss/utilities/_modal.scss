@@ -1,0 +1,209 @@
+
+
+.modal-content {
+    background: $white;
+    border-radius: 15px;
+    padding: 30px;
+    border: 0;
+    position: relative;
+    @include respond-below(sm) {
+        padding: 20px;
+    }
+    .modal-body {
+        padding: 0;
+    }
+    .btn-close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: $grey;
+    }
+    .modal__title {
+        @include fontStyle(2.4rem, 700, $dark);
+        @extend %headerFont;
+        margin-bottom: 20px;
+    }
+    .subtitle {
+        @include fontStyle(1.4rem, 400, $tundra);
+        margin-bottom: 20px;
+    }
+}
+
+.modal__bid {
+    .item__name {
+        @include fontStyle(1.4rem, 400, $tundra);
+        line-height: 1.8;
+        margin-bottom: 20px;
+        span {
+            font-weight: 600;
+            color: $dark;
+            display: block;
+        }
+    }
+    .bid__suggestion {
+        @include fontStyle(1.4rem, 600, $dark);
+        margin-bottom: 10px;
+        span {
+            color: $grey;
+            margin-left: 10px;
+        }
+    }
+    
+    .input-group {
+        .form-control {
+            background: $white;
+            border: 2px solid rgba($black, .1);
+            height: 55px;
+        }
+        .dropdown-toggle {
+            background: $white;
+            min-width: 170px;
+            border: 2px solid rgba($black, .1);
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            outline: none;
+            box-shadow: none;
+            font-size: 1.4rem;
+            text-align: left;
+            padding: 10px 15px;
+            color: $dark;
+            &:focus {
+                box-shadow: none;
+            }
+            &::after {
+                border: 0;
+            }
+            &::before {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 15px;
+                content: "\f107";
+                font-family: 'Font Awesome 5 Free';
+                font-weight: 900;
+                color: $grey;
+            }
+        }
+        .dropdown-menu {
+            background: $white;
+            border: 1px solid rgba($black, .06);
+            border-radius: 10px;
+            box-shadow: 0px 10px 20px rgba($black, 0.05);
+            min-width: 210px;
+            padding: 15px;
+            li {
+                a {
+                    padding: 6px 0;
+                    @include fontStyle(1.4rem, 400, $tundra);
+                    &:hover {
+                        background: $white;
+                    }
+                }
+                &.selected {
+                    a {
+                        @include fontStyle(1.4rem, 600, $dark);
+                    }
+                }
+            }
+        }
+    }
+    .input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+        margin-left: -2px;
+    }
+    .bid__balance__info {
+        margin-bottom: 25px;
+        ul {
+            li {
+                display: flex;
+                justify-content: space-between;
+                &:not(:last-child) {
+                    margin-bottom: 10px;
+                }
+                span {
+                    @include fontStyle(1.4rem, 600, $grey);
+                    &:nth-child(2) {
+                        color: $dark;
+                    }
+                    span {
+                        font-size: 1.2rem;
+                        color: $primary;
+                        background: rgba($primary, .15);
+                        padding: 2px 5px;
+                        border-radius: 5px;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
+    .button {
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+}
+
+.modal__report {
+    .bd-select {
+        width: 100%;
+        margin-top: 8px;
+        .icon {
+            color: $grey;
+            top: 15px;
+        }
+        select {
+            width: 100%;
+            height: 55px;
+            color: $dark;
+        }
+    }
+    .form-control {
+        background: $white;
+        border: 2px solid rgba($black, .1);
+    }
+    .button {
+        text-transform: uppercase;
+        font-weight: 700;
+        padding: 18.5px 20px;
+    }
+}
+
+.modal__wallet {
+    .wallets {
+        margin-bottom: 15px;
+        .wallet__item {
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+            a {
+                background: #f1f1f1;
+                border-radius: 10px;
+                padding: 10px 20px;
+                display: flex;
+                align-items: center;
+                min-height: 60px;
+                width: 100%;
+                position: relative;
+                &:before {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 20px;
+                    content: '\f105';
+                    font-family: 'Font Awesome 5 Free';
+                    font-weight: 900;
+                    color: $grey;
+                }
+                .icon {
+                    flex: 0 0 65px;
+                    min-width: 65px;
+                }
+            }
+        }
+    }
+    .terms {
+        @include fontStyle(1.2rem, 400, $tundra);
+        a {
+            font-weight: 600;
+        }
+    }
+}

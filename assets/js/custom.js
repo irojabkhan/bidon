@@ -16,9 +16,9 @@ $( document ).ready(function() {
 
     /* Page Share Settings
     ..........................................*/
-    $('.page__header__button .icon').on('click', function() {
+    $('.page__header__button .icon').on('click', function(e) {
+        e.preventDefault();
         $(this).siblings('.dropdown__elem').fadeToggle();
-        console.log('hello');
     })
 
     /* Custom Filter Settings
