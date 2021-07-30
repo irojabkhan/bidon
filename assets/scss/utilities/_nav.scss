@@ -1,0 +1,264 @@
+
+header {
+    position: relative;
+    height: 105px;
+    .bd-nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 999;
+    }
+}
+
+.nav__wrap {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 30px 0;
+    .site__logo {
+        margin-right: 100px;
+        @include respond-below(xxl) {
+            margin-right: 50px;
+        }
+    }
+    .nav__menus {
+        flex: 1 1 auto;
+        display: flex;
+        align-items: center;
+        margin-right: 40px;
+        .explore__category {
+            margin-right: 80px;
+            position: relative;
+            @include respond-below(xxl) {
+                margin-right: 30px;
+            }
+            .category__toggler {
+                @include fontStyle(1.4rem, 600, $tundra);
+                position: relative;
+                padding-right: 15px;
+                &::before {
+                    position: absolute;
+                    top: 2px;
+                    right: 0;
+                    content: "\f107";
+                    font-family: 'Font Awesome 5 Free';
+                    font-weight: 900;
+                    color: $grey;
+                }
+            }
+            .explore__category__menu {
+                display: none;
+                position: absolute;
+                top: calc(100% + 10px);
+                left: 0;
+                background: $white;
+                border: 1px solid rgba($black, 0.06);
+                box-shadow: 0px 10px 20px rgba($black, 0.05);
+                border-radius: 10px;
+                min-width: 200px;
+                z-index: 99;
+                padding: 20px 0;
+                li {
+                    &:not(:last-child) {
+                        margin-bottom: 10px;
+                    }
+                    a {
+                        padding: 5px 25px;
+                        width: 100%;
+                        @include fontStyle(1.4rem, 600, $dark);
+                        &:hover {
+                            background: #F3F3F3;
+                        }
+                        span {
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+        }
+        .nav__search {
+            position: relative;
+            flex: 1 1 auto;
+            margin-right: 90px;
+            @include respond-below(xxl) {
+                margin-right: 40px;
+            }
+            .icon {
+                position: absolute;
+                top: 10px;
+                left: 15px;
+                font-size: 1.5rem;
+                color: $grey;
+            }
+            .form-control {
+                padding-left: 40px;
+            }
+        }
+        .nav__menu {
+            display: flex;
+            align-items: center;
+            .dropdown {
+                &:hover {
+                    >.dropdown__menu {
+                        visibility: visible;
+                        opacity: 1;
+                        top: 100%;
+                    }
+                }
+            }
+            .nav__item {
+                position: relative;
+                &:hover {
+                    .nav__link.dropdown__toggler {
+                        color: $dark;
+                        &::before {
+                            color: $dark;
+                        }
+                    }
+                }
+                &:not(:last-child) {
+                    margin-right: 30px;
+                }
+                .nav__link {
+                    @include fontStyle(1.4rem, 600, $tundra);
+                    &.dropdown__toggler {
+                        padding: 3px 15px 3px 0;
+                        &::before {
+                            position: absolute;
+                            top: 3px;
+                            right: 0;
+                            content: "\f107";
+                            font-family: 'Font Awesome 5 Free';
+                            font-weight: 900;
+                            color: $grey;
+                            font-size: 1.6rem;
+                            transition: all .3s ease;
+                        }
+                    }
+                }
+                .dropdown__menu {
+                    position: absolute;
+                    top: calc(100% + 15px);
+                    left: 0;
+                    background: $white;
+                    border: 1px solid rgba($black, 0.06);
+                    box-shadow: 0px 10px 20px rgba($black, 0.05);
+                    border-radius: 10px;
+                    min-width: 190px;
+                    padding: 20px 0;
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: all .3s ease;
+                    @include respond-below(xxl) {
+                        min-width: 170px;
+                    }
+                    .dropdown__menu {
+                        left: 100%;
+                        top: 0;
+                        .dropdown__menu {
+                            right: 100%;
+                            left: auto;
+                        }
+                    }
+                    .nav__item {
+                        &:not(:last-child) {
+                            margin-bottom: 5px;
+                            margin-right: 0;
+                        }
+                        a {
+                            padding: 5px 22px;
+                            width: 100%;
+                            @include fontStyle(1.4rem, 600, $tundra);
+                            @include respond-below(xxl) {
+                                padding: 5px 18px;
+                            }
+                            &.dropdown__toggler {
+                                position: relative;
+                                &::before {
+                                    position: absolute;
+                                    top: 3px;
+                                    right: 22px;
+                                    content: "\f105";
+                                    font-family: 'Font Awesome 5 Free';
+                                    font-weight: 900;
+                                    color: $grey;
+                                    font-size: 1.6rem;
+                                    transition: all .3s ease;
+                                    @include respond-below(xxl) {
+                                        right: 18px;
+                                    }
+                                }
+                            }
+                            &:hover {
+                                color: $dark;
+                                background: #F3F3F3;
+                            }
+                            span {
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .nav__quick__option {
+        flex: 0 0 auto;
+        display: flex;
+        align-items: center;
+        .color__mood,
+        .wallet__icon {
+            color: $grey;
+            margin-right: 40px;
+            font-size: 1.8rem;
+            &:hover {
+                color: $dark;
+            }
+        }
+        .login__option {
+            padding: 13.5px 22px;
+            font-size: 1.4rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+    }
+    @include respond-below(xl) {
+        .nav__menus {
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            background: $white;
+            margin-right: 0;
+            width: 300px;
+            padding: 50px 30px;
+            box-shadow: 0 0 20px 0 rgba($black, 0.2);
+            z-index: 999;
+            flex-direction: column;
+            align-items: flex-start;
+            .explore__category {
+                order: 2;
+                margin-top: 8px;
+            }
+            .nav__search {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                display: none;
+            }
+            .nav__menu {
+                // display: block;
+                flex-direction: column;
+                align-items: flex-start;
+                .nav__item {
+                    &:not(:last-child) {
+                        margin-right: 0;
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+        }
+    }
+}

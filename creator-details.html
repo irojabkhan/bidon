@@ -23,7 +23,7 @@
                             <div class="page__header__button report__button">
                                 <a class="icon" href="#"><i class="fas fa-ellipsis-h"></i></a>
                                 <div class="dropdown__elem">
-                                    <a href="#"><i class="fas fa-ban"></i> Report</a>
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#reportmodal"><i class="fas fa-ban"></i> Report</a>
                                 </div>
                             </div>
                             <div class="page__header__button share__button">
@@ -695,6 +695,39 @@
 
     </div>
 
+    <!-- Modal -->
+    <div class="modal fade" id="reportmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal__report">
+                    <h4 class="modal__title">Submit a report</h4>
+                    <p class="subtitle">You must be sure with your reportinhg issue, We will verify in proper way and take effective step</p>
+                    <form action="#">
+                        <div class="mb25">
+                            <label>Why You Reporting ?</label>
+                            <div class="bd-select">
+                                <span class="icon"><i class="fas fa-angle-down"></i></span>
+                                <select class="form-control">
+                                    <option value="">Select a reason</option>
+                                    <option value="">Abusing</option>
+                                    <option value="">Not real person</option>
+                                    <option value="">Hate speach</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb25">
+                            <label>Message</label>
+                            <textarea class="form-control" placeholder="Please explain your reporting reason"></textarea>
+                        </div>
+                        <button class="button button__primary button__block round-10">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
 
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/jquery.min.js"></script>

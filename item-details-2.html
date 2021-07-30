@@ -29,10 +29,23 @@
                                 <p>📷 Photos</p>
                                 <div class="details__more">
                                     <div class="more">
-                                        <a href="#"><i class="fas fa-ellipsis-h"></i></a>
+                                        <a href="#" class="toggler"><i class="fas fa-ellipsis-h"></i></a>
+                                        <div class="dropdown__elem">
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#reportmodal"><i class="fas fa-ban"></i> Report</a>
+                                        </div>
                                     </div>
                                     <div class="share">
-                                        <a href="#"><i class="fas fa-share-alt"></i></a>
+                                        <a href="#" class="toggler"><i class="fas fa-share-alt"></i></a>
+                                        <div class="dropdown__elem">
+                                            <ul>
+                                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                                <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                                                <li><a href="#"><i class="fas fa-envelope"></i></a></li>
+                                                <li><a href="#"><i class="fas fa-clone"></i></a></li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -40,7 +53,7 @@
                             <ul class="meta">
                                 <li>In Stock 5 of 10</li>
                                 <li><i class="fas fa-eye"></i> 4532</li>
-                                <li><i class="fas fa-heart"></i> 233</li>
+                                <li><i class="far fa-heart"></i> 233</li>
                             </ul>
                             <div class="item__owners">
                                 <div class="item__owner item__creator">
@@ -74,7 +87,7 @@
                                 </div>
                             </div>
                             <div class="bid__info no__auction">
-                                <a href="#" class="button button__block round-10">Place a Bid</a>
+                                <a href="#" class="button button__block round-10" data-bs-toggle="modal" data-bs-target="#bidModal">Place a Bid</a>
                             </div>
                             <p class="loyality__info text-center">10% royalty goes to the creator for future resale </p>
                             <div class="item__details__tab bd-tabs">
@@ -105,8 +118,102 @@
                                             <p class="description__info">It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition</p>
                                         </div>
                                     </div>
-                                    <div class="tab-pane fade" id="nav-place-bid" role="tabpanel" aria-labelledby="nav-place-bid-tab">...</div>
-                                    <div class="tab-pane fade" id="nav-history" role="tabpanel" aria-labelledby="nav-history-tab">...</div>
+                                    <div class="tab-pane fade" id="nav-place-bid" role="tabpanel" aria-labelledby="nav-place-bid-tab">
+                                        <div class="bid__history">
+                                            <div class="history__item">
+                                                <div class="thumb">
+                                                    <img src="assets/img/l_2.png" class="img-fluid" alt="">
+                                                </div>
+                                                <div class="info">
+                                                    <span class="bid__serial">Highest BID BY</span>
+                                                    <a href="#">Roe Ferris</a>
+                                                </div>
+                                                <p class="bid__amount highest">0.026 ETH  <span>(~$288.50)</span></p>
+                                                <p class="bid__time">24/06/2021, 11:36 AM</p>
+                                            </div>
+                                            <div class="history__item">
+                                                <div class="thumb">
+                                                    <img src="assets/img/l_5.png" class="img-fluid" alt="">
+                                                </div>
+                                                <div class="info">
+                                                    <span class="bid__serial">2nd BID BY</span>
+                                                    <a href="#">Ebony J. Atkison <span class="verified"><i class="fas fa-check-circle"></i></span></a>
+                                                </div>
+                                                <p class="bid__amount">0.026 ETH  <span>(~$288.50)</span></p>
+                                                <p class="bid__time">24/06/2021, 11:36 AM</p>
+                                            </div>
+                                            <div class="history__item">
+                                                <div class="thumb">
+                                                    <img src="assets/img/l_8.png" class="img-fluid" alt="">
+                                                </div>
+                                                <div class="info">
+                                                    <span class="bid__serial">1nd BID BY</span>
+                                                    <a href="#">Reospinoza <span class="verified"><i class="fas fa-check-circle"></i></span></a>
+                                                </div>
+                                                <p class="bid__amount">0.026 ETH  <span>(~$288.50)</span></p>
+                                                <p class="bid__time">24/06/2021, 11:36 AM</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="nav-history" role="tabpanel" aria-labelledby="nav-history-tab">
+                                        <div class="bid__history">
+                                            <div class="history__item">
+                                                <div class="thumb">
+                                                    <img src="assets/img/l_2.png" class="img-fluid" alt="">
+                                                </div>
+                                                <div class="info">
+                                                    <span class="bid__serial">BID Accepted</span>
+                                                    <a href="#">Roe Ferris</a>
+                                                </div>
+                                                <p class="bid__amount highest">0.026 ETH  <span>(~$288.50)</span></p>
+                                                <p class="bid__time">24/06/2021, 11:36 AM</p>
+                                            </div>
+                                            <div class="history__item">
+                                                <div class="thumb">
+                                                    <img src="assets/img/l_5.png" class="img-fluid" alt="">
+                                                </div>
+                                                <div class="info">
+                                                    <span class="bid__serial">2nd BID BY</span>
+                                                    <a href="#">Ebony J. Atkison <span class="verified"><i class="fas fa-check-circle"></i></span></a>
+                                                </div>
+                                                <p class="bid__amount">0.026 ETH  <span>(~$288.50)</span></p>
+                                                <p class="bid__time">24/06/2021, 11:36 AM</p>
+                                            </div>
+                                            <div class="history__item">
+                                                <div class="thumb">
+                                                    <img src="assets/img/l_8.png" class="img-fluid" alt="">
+                                                </div>
+                                                <div class="info">
+                                                    <span class="bid__serial">1nd BID BY</span>
+                                                    <a href="#">Reospinoza <span class="verified"><i class="fas fa-check-circle"></i></span></a>
+                                                </div>
+                                                <p class="bid__amount">0.026 ETH  <span>(~$288.50)</span></p>
+                                                <p class="bid__time">24/06/2021, 11:36 AM</p>
+                                            </div>
+                                            <div class="history__item">
+                                                <div class="thumb">
+                                                    <img src="assets/img/l_7.png" class="img-fluid" alt="">
+                                                </div>
+                                                <div class="info">
+                                                    <span class="bid__serial">Listed By</span>
+                                                    <a href="#">Edward Stewart <span class="verified"><i class="fas fa-check-circle"></i></span></a>
+                                                </div>
+                                                <p class="bid__amount">0.026 ETH  <span>(~$288.50)</span></p>
+                                                <p class="bid__time">24/06/2021, 11:36 AM</p>
+                                            </div>
+                                            <div class="history__item">
+                                                <div class="thumb">
+                                                    <img src="assets/img/l_6.png" class="img-fluid" alt="">
+                                                </div>
+                                                <div class="info">
+                                                    <span class="bid__serial">Minted BY</span>
+                                                    <a href="#">Katieines <span class="verified"><i class="fas fa-check-circle"></i></span></a>
+                                                </div>
+                                                <p class="bid__amount">0.026 ETH  <span>(~$288.50)</span></p>
+                                                <p class="bid__time">24/06/2021, 11:36 AM</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                   </div>
                             </div>
                         </div>
@@ -114,7 +221,6 @@
                 </div>
             </div>
         </div>
-
 
         <!-- Client -->
         <div class="client__wrap">
@@ -235,6 +341,87 @@
         </footer>
         <!-- Footer End -->
 
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="bidModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="modal__bid">
+                        <h3 class="modal__title">Place a bid</h3>
+                        <p class="item__name">You are bidding on <span>Zero Gravity 1 of 1 by @Edward Stewart</span></p>
+                        <p class="bid__suggestion">Your Bid <span> Minimum 0.027 ETH  (~$288.50)</span></p>
+                        <div class="input-group mb30">
+                            <input type="text" class="form-control" placeholder="Enter bid amount" aria-label="Text input with dropdown button">
+                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">ETH (Ethereum)</button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li class="selected"><a class="dropdown-item" href="#">ETH (Ethereum)</a></li>
+                                <li><a class="dropdown-item" href="#">LTC (Litecoin)</a></li>
+                                <li><a class="dropdown-item" href="#">BCH (Bitcoin Cash)</a></li>
+                                <li><a class="dropdown-item" href="#">DASH (Dash)</a></li>
+                                <li><a class="dropdown-item" href="#">ADA (Cardano)</a></li>
+                            </ul>
+                        </div>
+                        <div class="bid__balance__info">
+                            <ul>
+                                <li>
+                                    <span>Your balance <span>deposit</span></span>
+                                    <span>2.586 ETH</span>
+                                </li>
+                                <li>
+                                    <span>Total bid Amount</span>
+                                    <span>0.027 ETH</span>
+                                </li>
+                                <li>
+                                    <span>Service Fee (3%)</span>
+                                    <span>0.0012 ETH</span>
+                                </li>
+                                <li>
+                                    <span>You will pay</span>
+                                    <span>0.028 ETH</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="#" class="button button__primary button__block round-10">Place a Bid</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="reportmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal__report">
+                    <h4 class="modal__title">Submit a report</h4>
+                    <p class="subtitle">You must be sure with your reportinhg issue, We will verify in proper way and take effective step</p>
+                    <form action="#">
+                        <div class="mb25">
+                            <label>Why You Reporting ?</label>
+                            <div class="bd-select">
+                                <span class="icon"><i class="fas fa-angle-down"></i></span>
+                                <select class="form-control">
+                                    <option value="">Select a reason</option>
+                                    <option value="">Abusing</option>
+                                    <option value="">Not real person</option>
+                                    <option value="">Hate speach</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb25">
+                            <label>Message</label>
+                            <textarea class="form-control" placeholder="Please explain your reporting reason"></textarea>
+                        </div>
+                        <button class="button button__primary button__block round-10">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
     </div>
 
 

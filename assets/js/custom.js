@@ -7,6 +7,13 @@ $( document ).ready(function() {
         maxGlare: 0.1
     });
 
+
+    /* Explore Settings
+    ..........................................*/
+    $('.explore__category .category__toggler').on('click', function(e) {
+        $(this).siblings('.explore__category__menu').fadeToggle();
+    })
+
     /* Favourite Settings
     ..........................................*/
     $('.item__card .favourite').on('click', function(e) {
@@ -16,7 +23,7 @@ $( document ).ready(function() {
 
     /* Page Share Settings
     ..........................................*/
-    $('.page__header__button .icon').on('click', function(e) {
+    $('.page__header__button .icon, .details__more .toggler').on('click', function(e) {
         e.preventDefault();
         $(this).siblings('.dropdown__elem').fadeToggle();
     })
