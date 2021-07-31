@@ -8,6 +8,27 @@ header {
         left: 0;
         right: 0;
         z-index: 999;
+        padding: 30px 0;
+        transition: all .3s ease;
+        &.fixed {
+            background: rgba($liteGrey, .7);
+            backdrop-filter: blur(20px);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+    }
+}
+
+.header__shape {
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        content: url('../img/header-shape.png');
+        
     }
 }
 
@@ -15,7 +36,6 @@ header {
     display: flex;
     align-items: center;
     width: 100%;
-    padding: 30px 0;
     .site__logo {
         margin-right: 100px;
         @include respond-below(xxl) {

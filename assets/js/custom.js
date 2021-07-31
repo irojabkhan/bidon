@@ -7,6 +7,18 @@ $( document ).ready(function() {
         maxGlare: 0.1
     });
 
+    /* Nav Settings
+    ..........................................*/
+    $(window).scroll(function() {    
+        var scroll = $(window).scrollTop();
+    
+        if (scroll > 0) {
+            $(".bd-nav").addClass("fixed");
+        } else {
+            $(".bd-nav").removeClass("fixed");
+        }
+    });
+
 
     /* Explore Settings
     ..........................................*/
@@ -23,7 +35,7 @@ $( document ).ready(function() {
 
     /* Page Share Settings
     ..........................................*/
-    $('.page__header__button .icon, .details__more .toggler').on('click', function(e) {
+    $('.page__header__button .icon, .details__more .toggler, .item__card .option__toggler').on('click', function(e) {
         e.preventDefault();
         $(this).siblings('.dropdown__elem').fadeToggle();
     })
@@ -41,7 +53,7 @@ $( document ).ready(function() {
         var $this = $(this), finalDate = $(this).data('countdown');
         $this.countdown(finalDate, function(event) {
             var totalHours = event.offset.totalDays;
-            $(this).html(event.strftime(totalHours + 'D &nbsp; %HH &nbsp; %MM &nbsp; LEFT'));
+            $(this).html(event.strftime(totalHours + 'D &nbsp; %HH &nbsp; %MM &nbsp; %SS'));
         });
     });
 
