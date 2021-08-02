@@ -14,13 +14,152 @@
 </head>
 <body>
     <div class="bd-wrap background__liteGrey">
-
+        
+        <header class="header__shape">
+            <div class="bd-nav">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <nav class="navbar navbar-expand-lg">
+                                <a href="index.html" class="navbar-brand">
+                                    <img src="assets/img/logo.png" alt="">
+                                </a>
+                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                    <form action="#" class="nav__search">
+                                        <span class="icon"><i class="fas fa-search"></i></span>
+                                        <input type="text" class="form-control" placeholder="Search by Items, Creator or collectible">
+                                    </form>
+                                    <ul class="navbar-nav main__nav">
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
+                                            <ul class="dropdown-menu">
+                                                <li class="nav-item"><a class="dropdown-item" href="index.html">Home One</a></li>
+                                                <li class="nav-item"><a class="dropdown-item" href="home-2.html">Home Two</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Discover</a>
+                                            <ul class="dropdown-menu">
+                                                <li class="nav-item">
+                                                    <a class="dropdown-item" href="explore.html">Explore</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="dropdown-item" href="explore-left-filter.html">Explore left</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="dropdown-item" href="explore-right-filter.html">Explore Right</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="dropdown-item" href="item-details.html">Item Details One</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="dropdown-item" href="item-details-2.html">Item Details Two</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
+                                            <ul class="dropdown-menu">
+                                                <li class="nav-item">
+                                                    <a class="dropdown-item" href="creator.html">Creator</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="dropdown-item" href="creator-details.html">Creator Profile</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="dropdown-item" href="collector.html">Collector Profile</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="dropdown-item" href="activity.html">Activity</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="dropdown-item" href="become-creator.html">Become a Creator</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="dropdown-item" href="create-item.html">Create Item</a>
+                                                </li>
+                                                <li class="nav-item dropdown">
+                                                    <a href="#" class="dropdown-item dropdown-toggle">Blog Pages</a>
+                                                    <ul class="dropdown-menu">
+                                                        <li class="nav-item">
+                                                            <a class="dropdown-item" href="blog.html">Blog</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="dropdown-item" href="blog-details.html">blog Details</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="nav-item dropdown">
+                                                    <a href="#" class="dropdown-item dropdown-toggle">Auth Pages</a>
+                                                    <ul class="dropdown-menu">
+                                                        <li class="nav-item">
+                                                            <a class="dropdown-item" href="signup.html">Sign Up</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="dropdown-item" href="login.html">Sign In</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="dropdown-item" href="reset.html">Reset Password</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <ul class="navbar-nav explore__category">
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Explore</a>
+                                            <ul class="dropdown-menu">
+                                                <li class="nav-item"><a class="dropdown-item" href="explore.html"><span>🎨</span> Artwork</a></li>
+                                                <li class="nav-item"><a class="dropdown-item" href="explore.html"><span>🎵</span> Music</a></li>
+                                                <li class="nav-item"><a class="dropdown-item" href="explore.html"><span>🎮</span> Sports</a></li>
+                                                <li class="nav-item"><a class="dropdown-item" href="explore.html"><span>📷</span> Photos</a></li>
+                                                <li class="nav-item"><a class="dropdown-item" href="explore.html"><span>🌎</span> Domains</a></li>
+                                                <li class="nav-item"><a class="dropdown-item" href="explore.html"><span>🤡</span> Memes</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <a href="login.html" class="login__option mobile__login button button__primary round-10">Sign in</a>
+                                </div>
+                                <div class="nav__quick__option">
+                                    <a href="#" class="nav__mobile__search"><i class="fas fa-search"></i></a>
+                                    <!-- <a href="#" class="color__mood">
+                                        <i class="far fa-moon"></i>
+                                    </a> -->
+                                    <a href="#" class="wallet__icon" data-bs-toggle="modal" data-bs-target="#walletModal">
+                                        <i class="fas fa-wallet"></i>
+                                    </a>
+                                    <a href="login.html" class="login__option button button__primary round-10">Sign in</a>
+                                </div>
+                                <button class="navbar-toggler collapsed" id="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                            </nav>
+                            <div class="nav__mobile__search__box">
+                                <form action="#">
+                                    <a href="#" class="search__close"><i class="fas fa-times"></i></a>
+                                    <div class="mb25">
+                                        <input type="text" class="form-control" placeholder="Search here">
+                                        <button><i class="fas fa-search"></i></button>
+                                    </div>
+                                </form>
+                                <p>Search by Items, Creator or collectible</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
         <div class="pt100 pb70">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="details__thumb">
-                            <img src="assets/img/details-thumb-2.jpg" class="img-fluid" alt="">
+                            <img src="assets/img/item/details-thumb-2.jpg" class="img-fluid" alt="">
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -58,7 +197,7 @@
                             <div class="item__owners">
                                 <div class="item__owner item__creator">
                                     <div class="thumb">
-                                        <img src="assets/img/l_5.png" class="img-fluid" alt="">
+                                        <img src="assets/img/avater/l_5.png" class="img-fluid" alt="">
                                     </div>
                                     <div class="item__body">
                                         <span class="owner__title">Creator</span>
@@ -67,7 +206,7 @@
                                 </div>
                                 <div class="item__owner item__collection">
                                     <div class="thumb">
-                                        <img src="assets/img/l_18.png" class="img-fluid" alt="">
+                                        <img src="assets/img/avater/l_18.png" class="img-fluid" alt="">
                                     </div>
                                     <div class="item__body">
                                         <span class="owner__title">Collection</span>
@@ -122,7 +261,7 @@
                                         <div class="bid__history">
                                             <div class="history__item">
                                                 <div class="thumb">
-                                                    <img src="assets/img/l_2.png" class="img-fluid" alt="">
+                                                    <img src="assets/img/avater/l_2.png" class="img-fluid" alt="">
                                                 </div>
                                                 <div class="info">
                                                     <span class="bid__serial">Highest BID BY</span>
@@ -133,7 +272,7 @@
                                             </div>
                                             <div class="history__item">
                                                 <div class="thumb">
-                                                    <img src="assets/img/l_5.png" class="img-fluid" alt="">
+                                                    <img src="assets/img/avater/l_5.png" class="img-fluid" alt="">
                                                 </div>
                                                 <div class="info">
                                                     <span class="bid__serial">2nd BID BY</span>
@@ -144,7 +283,7 @@
                                             </div>
                                             <div class="history__item">
                                                 <div class="thumb">
-                                                    <img src="assets/img/l_8.png" class="img-fluid" alt="">
+                                                    <img src="assets/img/avater/l_8.png" class="img-fluid" alt="">
                                                 </div>
                                                 <div class="info">
                                                     <span class="bid__serial">1nd BID BY</span>
@@ -159,7 +298,7 @@
                                         <div class="bid__history">
                                             <div class="history__item">
                                                 <div class="thumb">
-                                                    <img src="assets/img/l_2.png" class="img-fluid" alt="">
+                                                    <img src="assets/img/avater/l_2.png" class="img-fluid" alt="">
                                                 </div>
                                                 <div class="info">
                                                     <span class="bid__serial">BID Accepted</span>
@@ -170,7 +309,7 @@
                                             </div>
                                             <div class="history__item">
                                                 <div class="thumb">
-                                                    <img src="assets/img/l_5.png" class="img-fluid" alt="">
+                                                    <img src="assets/img/avater/l_5.png" class="img-fluid" alt="">
                                                 </div>
                                                 <div class="info">
                                                     <span class="bid__serial">2nd BID BY</span>
@@ -181,7 +320,7 @@
                                             </div>
                                             <div class="history__item">
                                                 <div class="thumb">
-                                                    <img src="assets/img/l_8.png" class="img-fluid" alt="">
+                                                    <img src="assets/img/avater/l_8.png" class="img-fluid" alt="">
                                                 </div>
                                                 <div class="info">
                                                     <span class="bid__serial">1nd BID BY</span>
@@ -192,7 +331,7 @@
                                             </div>
                                             <div class="history__item">
                                                 <div class="thumb">
-                                                    <img src="assets/img/l_7.png" class="img-fluid" alt="">
+                                                    <img src="assets/img/avater/l_7.png" class="img-fluid" alt="">
                                                 </div>
                                                 <div class="info">
                                                     <span class="bid__serial">Listed By</span>
@@ -203,7 +342,7 @@
                                             </div>
                                             <div class="history__item">
                                                 <div class="thumb">
-                                                    <img src="assets/img/l_6.png" class="img-fluid" alt="">
+                                                    <img src="assets/img/avater/l_6.png" class="img-fluid" alt="">
                                                 </div>
                                                 <div class="info">
                                                     <span class="bid__serial">Minted BY</span>
@@ -229,12 +368,12 @@
                     <div class="col">
                         <div class="clients">
                             <ul>
-                                <li><img src="assets/img/client-1.png" alt=""></li>
-                                <li><img src="assets/img/client-2.png" alt=""></li>
-                                <li><img src="assets/img/client-3.png" alt=""></li>
-                                <li><img src="assets/img/client-4.png" alt=""></li>
-                                <li><img src="assets/img/client-1.png" alt=""></li>
-                                <li><img src="assets/img/client-4.png" alt=""></li>
+                                <li><img src="assets/img/client/client-1.png" alt=""></li>
+                                <li><img src="assets/img/client/client-2.png" alt=""></li>
+                                <li><img src="assets/img/client/client-3.png" alt=""></li>
+                                <li><img src="assets/img/client/client-4.png" alt=""></li>
+                                <li><img src="assets/img/client/client-1.png" alt=""></li>
+                                <li><img src="assets/img/client/client-4.png" alt=""></li>
                             </ul>
                         </div>
                     </div>
@@ -344,7 +483,7 @@
     </div>
 
     <!-- Modal -->
-    <div class="modal fade" id="bidModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="bidModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-body">
@@ -391,7 +530,7 @@
         </div>
     </div>
 
-    <div class="modal fade" id="reportmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="reportmodal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-body">
@@ -424,7 +563,7 @@
         </div>
     </div>
 
-    <div class="modal fade" id="walletModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="walletModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-body">

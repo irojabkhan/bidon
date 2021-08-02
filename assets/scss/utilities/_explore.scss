@@ -219,6 +219,9 @@
             border-color: rgba($black, 0.1);
             background: $white;
         }
+        span {
+            margin-right: 5px;
+        }
     }
 }
 
@@ -268,7 +271,7 @@
                         input {
                             display: none;
                             &:checked {
-                                & ~ p {
+                                & ~ .text {
                                     &::before {
                                         background: $primary;
                                     }
@@ -278,11 +281,12 @@
                                 }
                             }
                         }
-                        p {
+                        .text {
                             @include fontStyle(1.4rem, 400, $dark);
                             @extend %bodyFont;
                             position: relative;
                             padding-left: 30px;
+                            display: inline-block;
                             &::before {
                                 position: absolute;
                                 top: 4px;
@@ -327,14 +331,14 @@
                         input {
                             display: none;
                             &:checked {
-                                ~ p span {
+                                ~ .text span {
                                     &:before {
                                         opacity: 1;
                                     }
                                 }
                             }
                         }
-                        p {
+                        .text {
                             display: flex;
                             align-items: center;
                             img {

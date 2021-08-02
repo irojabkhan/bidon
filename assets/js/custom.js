@@ -39,6 +39,18 @@ $( document ).ready(function() {
         });
     }
 
+    $('.nav__mobile__search').on('click', function(e) {
+        e.preventDefault();
+        $('.nav__mobile__search__box').slideDown();
+    })
+
+    $('.search__close').on('click', function(e) {
+        e.preventDefault();
+        $('.nav__mobile__search__box').slideUp();
+    })
+
+
+
     /* OwlCarousel
     ..........................................*/
     $(".trending__card__carousel").owlCarousel({
@@ -151,21 +163,16 @@ $( document ).ready(function() {
 
     /* Marquee Js
     ..........................................*/
-    function tabMaruee() {
-        $('.top__chart').marquee({
-            gap: 50,
-            delayBeforeStart: 0,
-            direction: 'left',
-            pauseOnHover: true,
-            // speed: 100,
-            startVisible: true,
-            duplicated: false
-        });
-    }
-    tabMaruee();
 
-    $('.top__chart__wrap button').on('shown.bs.tab', function (e) {
-        tabMaruee();
-    })
+    $('.top__chart').marquee({
+        gap: 0,
+        delayBeforeStart: 0,
+        direction: 'left',
+        pauseOnHover: true,
+        speed: 100,
+        startVisible: true,
+        duplicated: true
+    });
+
 
 });

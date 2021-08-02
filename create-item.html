@@ -14,7 +14,146 @@
 </head>
 <body>
     <div class="bd-wrap background__liteGrey">
-
+        
+        <header class="header__shape">
+            <div class="bd-nav">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <nav class="navbar navbar-expand-lg">
+                                <a href="index.html" class="navbar-brand">
+                                    <img src="assets/img/logo.png" alt="">
+                                </a>
+                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                    <form action="#" class="nav__search">
+                                        <span class="icon"><i class="fas fa-search"></i></span>
+                                        <input type="text" class="form-control" placeholder="Search by Items, Creator or collectible">
+                                    </form>
+                                    <ul class="navbar-nav main__nav">
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
+                                            <ul class="dropdown-menu">
+                                                <li class="nav-item"><a class="dropdown-item" href="index.html">Home One</a></li>
+                                                <li class="nav-item"><a class="dropdown-item" href="home-2.html">Home Two</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Discover</a>
+                                            <ul class="dropdown-menu">
+                                                <li class="nav-item">
+                                                    <a class="dropdown-item" href="explore.html">Explore</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="dropdown-item" href="explore-left-filter.html">Explore left</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="dropdown-item" href="explore-right-filter.html">Explore Right</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="dropdown-item" href="item-details.html">Item Details One</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="dropdown-item" href="item-details-2.html">Item Details Two</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
+                                            <ul class="dropdown-menu">
+                                                <li class="nav-item">
+                                                    <a class="dropdown-item" href="creator.html">Creator</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="dropdown-item" href="creator-details.html">Creator Profile</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="dropdown-item" href="collector.html">Collector Profile</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="dropdown-item" href="activity.html">Activity</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="dropdown-item" href="become-creator.html">Become a Creator</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="dropdown-item" href="create-item.html">Create Item</a>
+                                                </li>
+                                                <li class="nav-item dropdown">
+                                                    <a href="#" class="dropdown-item dropdown-toggle">Blog Pages</a>
+                                                    <ul class="dropdown-menu">
+                                                        <li class="nav-item">
+                                                            <a class="dropdown-item" href="blog.html">Blog</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="dropdown-item" href="blog-details.html">blog Details</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="nav-item dropdown">
+                                                    <a href="#" class="dropdown-item dropdown-toggle">Auth Pages</a>
+                                                    <ul class="dropdown-menu">
+                                                        <li class="nav-item">
+                                                            <a class="dropdown-item" href="signup.html">Sign Up</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="dropdown-item" href="login.html">Sign In</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="dropdown-item" href="reset.html">Reset Password</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <ul class="navbar-nav explore__category">
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Explore</a>
+                                            <ul class="dropdown-menu">
+                                                <li class="nav-item"><a class="dropdown-item" href="explore.html"><span>🎨</span> Artwork</a></li>
+                                                <li class="nav-item"><a class="dropdown-item" href="explore.html"><span>🎵</span> Music</a></li>
+                                                <li class="nav-item"><a class="dropdown-item" href="explore.html"><span>🎮</span> Sports</a></li>
+                                                <li class="nav-item"><a class="dropdown-item" href="explore.html"><span>📷</span> Photos</a></li>
+                                                <li class="nav-item"><a class="dropdown-item" href="explore.html"><span>🌎</span> Domains</a></li>
+                                                <li class="nav-item"><a class="dropdown-item" href="explore.html"><span>🤡</span> Memes</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <a href="login.html" class="login__option mobile__login button button__primary round-10">Sign in</a>
+                                </div>
+                                <div class="nav__quick__option">
+                                    <a href="#" class="nav__mobile__search"><i class="fas fa-search"></i></a>
+                                    <!-- <a href="#" class="color__mood">
+                                        <i class="far fa-moon"></i>
+                                    </a> -->
+                                    <a href="#" class="wallet__icon" data-bs-toggle="modal" data-bs-target="#walletModal">
+                                        <i class="fas fa-wallet"></i>
+                                    </a>
+                                    <a href="login.html" class="login__option button button__primary round-10">Sign in</a>
+                                </div>
+                                <button class="navbar-toggler collapsed" id="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                            </nav>
+                            <div class="nav__mobile__search__box">
+                                <form action="#">
+                                    <a href="#" class="search__close"><i class="fas fa-times"></i></a>
+                                    <div class="mb25">
+                                        <input type="text" class="form-control" placeholder="Search here">
+                                        <button><i class="fas fa-search"></i></button>
+                                    </div>
+                                </form>
+                                <p>Search by Items, Creator or collectible</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
         <!-- Become Creator -->
         <div class="pt100 pb100 blur__bg">
             <div class="container">
@@ -206,7 +345,41 @@
     </div>
 
 
-    <div class="modal fade" id="walletModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- Modal -->
+    <div class="modal fade" id="reportmodal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal__report">
+                    <h4 class="modal__title">Submit a report</h4>
+                    <p class="subtitle">You must be sure with your reportinhg issue, We will verify in proper way and take effective step</p>
+                    <form action="#">
+                        <div class="mb25">
+                            <label>Why You Reporting ?</label>
+                            <div class="bd-select">
+                                <span class="icon"><i class="fas fa-angle-down"></i></span>
+                                <select class="form-control">
+                                    <option value="">Select a reason</option>
+                                    <option value="">Abusing</option>
+                                    <option value="">Not real person</option>
+                                    <option value="">Hate speach</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb25">
+                            <label>Message</label>
+                            <textarea class="form-control" placeholder="Please explain your reporting reason"></textarea>
+                        </div>
+                        <button class="button button__primary button__block round-10">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="walletModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-body">
@@ -254,6 +427,54 @@
         </div>
         </div>
     </div>
+
+    <div class="modal fade" id="bidModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="modal__bid">
+                        <h3 class="modal__title">Place a bid</h3>
+                        <p class="item__name">You are bidding on <span>Zero Gravity 1 of 1 by @Edward Stewart</span></p>
+                        <p class="bid__suggestion">Your Bid <span> Minimum 0.027 ETH  (~$288.50)</span></p>
+                        <div class="input-group mb30">
+                            <input type="text" class="form-control" placeholder="Enter bid amount" aria-label="Text input with dropdown button">
+                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">ETH (Ethereum)</button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li class="selected"><a class="dropdown-item" href="#">ETH (Ethereum)</a></li>
+                                <li><a class="dropdown-item" href="#">LTC (Litecoin)</a></li>
+                                <li><a class="dropdown-item" href="#">BCH (Bitcoin Cash)</a></li>
+                                <li><a class="dropdown-item" href="#">DASH (Dash)</a></li>
+                                <li><a class="dropdown-item" href="#">ADA (Cardano)</a></li>
+                            </ul>
+                        </div>
+                        <div class="bid__balance__info">
+                            <ul>
+                                <li>
+                                    <span>Your balance <span>deposit</span></span>
+                                    <span>2.586 ETH</span>
+                                </li>
+                                <li>
+                                    <span>Total bid Amount</span>
+                                    <span>0.027 ETH</span>
+                                </li>
+                                <li>
+                                    <span>Service Fee (3%)</span>
+                                    <span>0.0012 ETH</span>
+                                </li>
+                                <li>
+                                    <span>You will pay</span>
+                                    <span>0.028 ETH</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="#" class="button button__primary button__block round-10">Place a Bid</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/jquery.min.js"></script>

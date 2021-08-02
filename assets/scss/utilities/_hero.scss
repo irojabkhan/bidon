@@ -3,6 +3,7 @@
     h1 {
         @include fontStyle(var(--h1-fontsize), 700, $dark);
         @extend %headerFont;
+        line-height: 1.5;
         margin-bottom: 20px;
         @include respond-below(sm) {
             br {

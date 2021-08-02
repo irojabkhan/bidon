@@ -19,6 +19,9 @@ header {
         @include respond-below(xl) {
             padding: 20px 0;
         }
+        @include respond-below(lg) {
+            background: $white;
+        }
         @include respond-below(md) {
             padding: 10px 0;
         }
@@ -31,6 +34,9 @@ header {
             right: 0;
             padding: 20px 0;
             box-shadow: 0px 4px 8px rgba($black, 0.04);
+            @include respond-below(lg) {
+                background: $white;
+            }
             @include respond-below(md) {
                 padding: 10px 0;
             }
@@ -48,6 +54,7 @@ header {
         
     }
 }
+
 .bd-nav {
     .navbar {
         background: transparent;
@@ -64,15 +71,31 @@ header {
         }
         .navbar-collapse {
             margin-right: 40px;
+            @include respond-below(lg) {
+                position: fixed;
+                top: 85px;
+                left: 0;
+                right: 0;
+                background: $white;
+                box-shadow: 0px 10px 20px rgba($black, 0.05);
+                margin-right: 0;
+                padding: 0 20px;
+                z-index: 99999;
+            }
+            @include respond-below(md) {
+                top: 50px;
+            }
             .explore__category {
                 margin-right: 80px;
                 @include respond-below(xxl) {
                     margin-right: 30px;
                 }
-                @include respond-above(xl) {
+                @include respond-above(lg) {
                     order: 1;
                 }
-                @include respond-below(xl) {
+                @include respond-below(lg) {
+                    margin-bottom: 15px;
+                    margin-top: 5px;
                     margin-right: 0;
                 }
             }
@@ -84,9 +107,6 @@ header {
                 @include respond-above(xl) {
                     order: 2;
                     display: block;
-                }
-                @include respond-below(xxl) {
-                    margin-right: 40px;
                 }
                 .icon {
                     position: absolute;
@@ -100,15 +120,22 @@ header {
                 }
             }
             .main__nav {
-                @include respond-above(xl) {
+                @include respond-above(lg) {
                     order: 3;
+                    margin-left: auto;
+                }
+                @include respond-below(lg) {
+                    margin-top: 15px;
                 }
             }
             .navbar-nav {
+                @include respond-below(lg) {
+                    width: 100%;
+                }
                 .nav-item {
                     position: relative;
                     &:not(:last-child) {
-                        @include respond-above(xl) {
+                        @include respond-above(lg) {
                             margin-right: 30px;
                         }
                         margin-bottom: 5px;
@@ -139,6 +166,10 @@ header {
                         @include fontStyle(1.4rem, 600, $tundra);
                         &.dropdown-toggle {
                             padding: 3px 15px 3px 0;
+                            @include respond-below(lg) {
+                                display: inline-block;
+                                position: relative;
+                            }
                             &::before {
                                 position: absolute;
                                 top: 3px;
@@ -157,24 +188,30 @@ header {
                             }
                         }
                     }
+                    
                     .dropdown-menu {
                         background: $white;
                         border-radius: 10px;
                         transition: all .3s ease;
-                        @include respond-above (xl) {
+                        @include respond-above(xl) {
+                            min-width: 190px;
                             padding: 20px 0;
+                        }
+                        @include respond-above(lg) {
+                            padding: 15px 0;
                             border: 1px solid rgba($black, 0.06);
                             box-shadow: 0px 10px 20px rgba($black, 0.05);
                             position: absolute;
                             top: calc(100% + 15px);
                             left: 0;
-                            min-width: 190px;
                             visibility: hidden;
                             opacity: 0;
                             display: block;
-                        }
-                        @include respond-below(xxl) {
                             min-width: 170px;
+                        }
+                        @include respond-below(lg) {
+                            border: 0;
+                            padding-left: 20px;
                         }
                         .nav-item {
                             margin-right: 0;
@@ -182,13 +219,17 @@ header {
                                 padding: 5px 22px;
                                 width: 100%;
                                 @include fontStyle(1.4rem, 600, $tundra);
-                                @include respond-below(xxl) {
+                                @include respond-below(xl) {
                                     padding: 5px 18px;
+                                }
+                                @include respond-below(lg) {
+                                    padding-right: 0;
+                                    padding-left: 0;
                                 }
                                 &:hover {
                                     color: $dark;
                                     background: #F3F3F3;
-                                    @include respond-below(xl) {
+                                    @include respond-below(lg) {
                                         background: transparent;
                                         color: $tundra;
                                     }
@@ -200,6 +241,11 @@ header {
                             }
                             .dropdown-toggle {
                                 position: relative;
+                                @include respond-below(lg) {
+                                    display: inline-block;
+                                    width: auto;
+                                    padding-right: 15px;
+                                }
                                 &::before {
                                     position: absolute;
                                     top: 3px;
@@ -212,6 +258,10 @@ header {
                                     transition: all .3s ease;
                                     @include respond-below(xxl) {
                                         right: 18px;
+                                    }
+                                    @include respond-below(lg) {
+                                        right: 0;
+                                        content: "\f107";
                                     }
                                 }
                                 &::after {
@@ -248,7 +298,7 @@ header {
             flex: 0 0 auto;
             display: flex;
             align-items: center;
-            @include respond-below(xl) {
+            @include respond-below(lg) {
                 margin-left: auto;
                 margin-right: 30px;
             }
@@ -262,7 +312,7 @@ header {
                 margin-right: 40px;
                 font-size: 1.8rem;
                 @include respond-below(md) {
-                    margin-right: 20px;
+                    margin-right: 25px;
                 }
                 &:hover {
                     color: $dark;
@@ -271,14 +321,18 @@ header {
             .nav__mobile__search {
                 display: none;
                 @include respond-below(xl) {
+                    margin-right: 30px;
                     display: block;
                     font-size: 1.6rem;
                 }
-            }
-            .color__mood {
                 @include respond-below(md) {
                     margin-right: 25px;
                 }
+            }
+            .color__mood {
+                // @include respond-below(md) {
+                //     margin-right: 25px;
+                // }
             }
             .login__option {
                 padding: 13.5px 22px;
@@ -290,7 +344,7 @@ header {
                 }
             }
         }
-        @include respond-below(xl) {
+        @include respond-below(lg) {
             .navbar-toggler {
                 width: 20px;
                 height: 16px;
@@ -348,45 +402,43 @@ header {
                     }
                 }
             }
-            .navbar-collapse {
-                position: absolute;
-                top: calc(100% + 10px);
-                width: 100%;
-                max-width: 300px;
-                right: 0;
-                border-radius: 10px;
-                background: $white;
-                box-shadow: 0px 10px 20px rgba($black, 0.05);
-                margin-right: 0;
-                padding: 0 20px;
-                .explore__category {
-                    margin-bottom: 15px;
-                    margin-top: 5px;
+        }
+    }
+    .nav__mobile__search__box {
+        display: none;
+        @include respond-below(xl) {
+            // display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 9999999;
+            background: $white;
+            padding: 20px;
+            padding-bottom: 40px;
+            box-shadow: 0px 10px 20px rgba($black, 0.05);
+            form {
+                position: relative;
+                padding-left: 30px;
+                .search__close {
+                    position: absolute;
+                    top: 4px;
+                    left: 0;
+                    color: $grey;
+                    font-size: 2.2rem;
                 }
-                .main__nav {
-                    margin-top: 15px;
+                button {
+                    position: absolute;
+                    top: 10px;
+                    right: 15px;
+                    background: transparent;
+                    color: $grey;
+                    font-size: 1.6rem;
                 }
-                .navbar-nav {
-                    width: 100%;
-                    .nav-item {
-                        .dropdown-menu {
-                            border: 0;
-                            padding-left: 20px;
-                            .nav-item {
-                                .dropdown-item {
-                                    padding-right: 0;
-                                    padding-left: 0;
-                                    &.dropdown-toggle {
-                                        &::before {
-                                            right: 0;
-                                            content: "\f107";
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
+            }
+            p {
+                @include fontStyle(1.4rem, 600, $grey);
+                text-align: center;
             }
         }
     }

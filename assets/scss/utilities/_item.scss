@@ -150,10 +150,12 @@
             border-radius: 8px;
             padding: 5px 15px;
             text-align: center;
-            min-width: 175px;
+            min-width: 175px; 
             span {
                 @include fontStyle(1.4rem, 600);
-                @extend %gradientText;
+                background: -webkit-linear-gradient(0deg, rgba(65,88,208,1) 0%, rgba(200,80,192,1) 50%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
             }
         }
     }
@@ -173,7 +175,7 @@
                 flex: 0 0 30px;
                 border-radius: 50%;
                 overflow: hidden;
-                margin-right: 15px;
+                margin-right: 10px;
             }
             .author__name {
                 @include fontStyle(1.4rem, 500, $dark);
@@ -581,7 +583,7 @@
                 opacity: 1;
             }
             &::after {
-                @extend %gradientRiv;
+                background: -webkit-linear-gradient(180deg, rgba(65,88,208,1) 0%, rgba(200,80,192,1) 50%);
                 opacity: 0;
             }
             &:hover {

@@ -1,3 +1,0 @@
-1. seller marquee js
-2. Trending Auction Countdown
-3. Trending Auction favourite

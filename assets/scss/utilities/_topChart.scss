@@ -19,6 +19,12 @@
             }
         }
     }
+    >h4 {
+        @include fontStyle(var(--h4-fontsize), 700, $black);
+        @extend %headerFont;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+    }
 }
 
 .top__chart {
@@ -84,6 +90,7 @@
         h4 {
             @include fontStyle(1.4rem, 600, $dark);
             @extend %headerFont;
+            line-height: 1.6;
             .verified {
                 @extend %gradientText;
                 margin-left: 8px;

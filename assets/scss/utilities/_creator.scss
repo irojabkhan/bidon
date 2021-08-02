@@ -267,7 +267,7 @@
             input {
                 display: none;
                 &:checked {
-                    & ~ p {
+                    & ~ .text {
                         &::before {
                             background: $primary;
                         }
@@ -277,11 +277,12 @@
                     }
                 }
             }
-            p {
+            .text {
                 @include fontStyle(1.4rem, 400, $dark);
                 @extend %bodyFont;
                 position: relative;
                 padding-left: 30px;
+                display: inline-block;
                 &::before {
                     position: absolute;
                     top: 4px;
