@@ -178,7 +178,7 @@
                 margin-right: 10px;
             }
             .author__name {
-                @include fontStyle(1.4rem, 500, $dark);
+                @include fontStyle(1.4rem, 600, $dark);
                 @extend %bodyFont;
                 .varified {
                     margin-left: 10px;
@@ -198,7 +198,7 @@
             align-items: center;
             margin-bottom: 15px;
             p {
-                @include fontStyle(1.4rem, 500);
+                @include fontStyle(1.4rem, 600);
                 @extend %gradientText;
                 @extend %bodyFont;
                 margin-right: 20px;
@@ -489,7 +489,7 @@
                     display: block;
                 }
                 .name {
-                    @include fontStyle(1.4rem, 500, $dark);
+                    @include fontStyle(1.4rem, 600, $dark);
                     @extend %bodyFont;
                     line-height: 1.3;
                     .verified {
@@ -525,7 +525,7 @@
                 }
             }
             p {
-                @include fontStyle(1.6rem, 400, $dark);
+                @include fontStyle(1.6rem, 600, $dark);
                 @extend %headerFont;
                 text-transform: uppercase;
             }
@@ -583,7 +583,7 @@
                 opacity: 1;
             }
             &::after {
-                background: -webkit-linear-gradient(180deg, rgba(65,88,208,1) 0%, rgba(200,80,192,1) 50%);
+                background: linear-gradient(90deg, #4158D0 0%, #C850C0 100%);
                 opacity: 0;
             }
             &:hover {
@@ -704,7 +704,7 @@
                         line-height: 1.3;
                     }
                     a {
-                        @include fontStyle(1.4rem, 500, $black);
+                        @include fontStyle(1.4rem, 600, $black);
                         .verified {
                             @extend %gradientText;
                         }

@@ -57,6 +57,7 @@
         @extend %headerFont;
         .varified {
             margin-left: 5px;
+            font-size: 1.4rem;
             i {
                 @extend %gradientText;
             }
@@ -79,6 +80,13 @@
         @extend %bodyFont;
         margin-top: 10px;
         cursor: pointer;
+        i {
+            font-size: 1rem;
+            color: $grey;
+        }
+        span {
+            margin-left: 5px;
+        }
         &.following {
             background: rgba($primary, .15);
             color: $primary;
@@ -113,6 +121,7 @@
 .creator__info {
     margin-top: -205px;
     margin-bottom: 30px;
+    position: relative;
     @include respond-below(sm) {
         margin-top: -160px;
     }
@@ -186,6 +195,10 @@
         }
         .button {
             margin-bottom: 20px;
+            i {
+                font-size: 12px;
+                margin-right: 5px;
+            }
         }
         .more__accounts {
             ul {

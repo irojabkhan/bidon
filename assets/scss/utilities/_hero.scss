@@ -26,6 +26,13 @@
         @extend %bodyFont;
         margin-bottom: 35px;
     }
+    .create__button {
+        &:hover {
+            border-color: rgba($primary, .3);
+            background: $white;
+            color: $primary;
+        }
+    }
 }
 
 .hero__thumb__area {

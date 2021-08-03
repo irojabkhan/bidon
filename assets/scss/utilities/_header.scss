@@ -1,6 +1,6 @@
 
 .section__header {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     h2 {
         @include fontStyle(var(--h3-fontsize), 700, $dark);
         @extend %headerFont;
@@ -18,11 +18,17 @@
                 margin-top: 20px;
             }
         }
+        .bd-select {
+            .icon {
+                color: $grey;
+            }
+        }
     }
 }
 
 .page__header {
     // height: 350px;
+    position: relative;
 }
 
 .page__header__bg {
@@ -111,4 +117,7 @@
     box-shadow: 0 10px 20px rgba($black, .05);
     border: 1px solid rgba($black, .06);
     display: none;
+    &.show {
+        display: block;
+    }
 }

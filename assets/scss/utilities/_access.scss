@@ -32,6 +32,8 @@
         padding: 20.5px 44px;
         position: relative;
         background: transparent;
+        text-transform: uppercase;
+        font-weight: 700;
         z-index: 0;
         @include respond-below(lg) {
             padding: 18px 44px;
@@ -53,7 +55,7 @@
             opacity: 1;
         }
         &::after {
-            @extend %gradientRiv;
+            background: linear-gradient(90deg, #4158D0 0%, #C850C0 100%);
             opacity: 0;
         }
         &:hover {

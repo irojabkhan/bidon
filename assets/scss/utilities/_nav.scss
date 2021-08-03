@@ -164,8 +164,8 @@ header {
                     }
                     .nav-link {
                         @include fontStyle(1.4rem, 600, $tundra);
+                        padding: 3px 15px 3px 0;
                         &.dropdown-toggle {
-                            padding: 3px 15px 3px 0;
                             @include respond-below(lg) {
                                 display: inline-block;
                                 position: relative;

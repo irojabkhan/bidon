@@ -45,9 +45,6 @@
             @include fontStyle(var(--h4-fontsize), 700, $dark);
             @extend %headerFont;
             margin-bottom: 15px;
-            &:hover {
-                color: $primary;
-            }
         }
         .collection__author {
             display: flex;
@@ -57,7 +54,7 @@
                 width: 30px;
                 border-radius: 50%;
                 overflow: hidden;
-                margin-right: 15px;
+                margin-right: 10px;
             }
             p {
                 @include fontStyle(1.4rem, 600, $dark);

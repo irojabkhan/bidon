@@ -2,6 +2,19 @@
 $( document ).ready(function() {
     "use strict"
 
+
+    /* Nav Settings
+    ..........................................*/
+    $(window).scroll(function() {    
+        var scroll = $(window).scrollTop();
+    
+        if (scroll > 0) {
+            $(".bd-nav").addClass("fixed");
+        } else {
+            $(".bd-nav").removeClass("fixed");
+        }
+    });
+
     /*-----------------------------------
     Navbar
     -----------------------------------*/
@@ -49,8 +62,6 @@ $( document ).ready(function() {
         $('.nav__mobile__search__box').slideUp();
     })
 
-
-
     /* OwlCarousel
     ..........................................*/
     $(".trending__card__carousel").owlCarousel({
@@ -92,17 +103,6 @@ $( document ).ready(function() {
         maxGlare: 0.1
     });
 
-    /* Nav Settings
-    ..........................................*/
-    $(window).scroll(function() {    
-        var scroll = $(window).scrollTop();
-    
-        if (scroll > 0) {
-            $(".bd-nav").addClass("fixed");
-        } else {
-            $(".bd-nav").removeClass("fixed");
-        }
-    });
 
     /* Favourite Settings
     ..........................................*/
@@ -113,10 +113,39 @@ $( document ).ready(function() {
 
     /* Page Share Settings
     ..........................................*/
-    $('.page__header__button .icon, .details__more .toggler, .item__card .option__toggler').on('click', function(e) {
+    $('.page__header__button .icon').on('click', function(e) {
         e.preventDefault();
-        $(this).siblings('.dropdown__elem').fadeToggle();
+        $(this).siblings('.dropdown__elem').toggleClass('show');
     })
+    $('.details__more .toggler').on('click', function(e) {
+        e.preventDefault();
+        $(this).siblings('.dropdown__elem').toggleClass('show');
+    })
+    $('.item__card .option__toggler').on('click', function(e) {
+        e.preventDefault();
+        $(this).siblings('.dropdown__elem').toggleClass('show');
+    })
+
+    $(document).on('click', function(event) {
+        var clickover = $(event.target);
+        var _openedElem = $('.dropdown__elem').hasClass('show');
+
+        if(_openedElem === true && !(clickover.is('.item__card .option__toggler, .item__card .option__toggler *'))) {
+            $('.item__card .dropdown__elem').removeClass('show');
+        }
+        if(_openedElem === true && !(clickover.is('.details__more .more .toggler, .details__more .more .toggler *'))) {
+            $('.details__more .more .dropdown__elem').removeClass('show');
+        }
+        if(_openedElem === true && !(clickover.is('.details__more .share .toggler, .details__more .share .toggler *'))) {
+            $('.details__more .share .dropdown__elem').removeClass('show');
+        }
+        if(_openedElem === true && !(clickover.is('.report__button .icon, .report__button .icon *'))) {
+            $('.report__button .dropdown__elem').removeClass('show');
+        }
+        if(_openedElem === true && !(clickover.is('.share__button .icon, .share__button .icon *'))) {
+            $('.share__button .dropdown__elem').removeClass('show');
+        }
+    });
 
     /* Custom Filter Settings
     ..........................................*/
